@@ -1,6 +1,7 @@
 package net.dispider.dispidermod;
 
 import com.mojang.logging.LogUtils;
+import net.dispider.dispidermod.blocks.ModBlocks;
 import net.dispider.dispidermod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -40,6 +41,7 @@ public class DiSpiderMod
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         // Register the item to a creative tab
@@ -60,6 +62,11 @@ public class DiSpiderMod
 
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.Money);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.BLUE_LOG);
+            event.accept(ModBlocks.BLUE_PLANK);
+            event.accept(ModBlocks.RAINBOW_BLOCK);
         }
     }
 

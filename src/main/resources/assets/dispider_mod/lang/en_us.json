@@ -1,3 +1,6 @@
 {
-  "item.dispider_mod.money": "Money"
+  "item.dispider_mod.money": "Money",
+  "block.dispider_mod.rainbow_block": "Rainbow Block",
+  "block.dispider_mod.blue_log":"Blue Log",
+  "block.dispider_mod.blue_plank": "Blue Planks"
 }
