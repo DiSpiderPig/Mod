@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "dispider_mod:rainbow"
+      "item": "dispider_mod:rainbow_block"
     }
   },
   "pattern": [
@@ -13,7 +13,7 @@
   ],
   "result": {
     "count": 1,
-    "id": "dispider_mod:rainbow_block"
+    "id": "dispider_mod:bitcoin"
   }
 
 

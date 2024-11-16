@@ -13,6 +13,9 @@ public class ModItems {
 
    public static final RegistryObject<Item> Money = ITEMS.register("money",()->new Item((new Item.Properties())));
 
+   public static final RegistryObject<Item> Bitcoin = ITEMS.register("bitcoin",()->new Item((new Item.Properties())));
+   public static final RegistryObject<Item> Rainbow = ITEMS.register("rainbow",()->new Item((new Item.Properties())));
+
 
    public static void register(IEventBus eventbus){
       ITEMS.register(eventbus);

@@ -2,5 +2,8 @@
   "item.dispider_mod.money": "Money",
   "block.dispider_mod.rainbow_block": "Rainbow Block",
   "block.dispider_mod.blue_log":"Blue Log",
-  "block.dispider_mod.blue_plank": "Blue Planks"
+  "block.dispider_mod.blue_plank": "Blue Planks",
+  "item.dispider_mod.bitcoin": "Bitcoin",
+  "item.dispider_mod.rainbow": "Rainbow",
+  "block.dispider_mod.rainbow_ore": "Rainbow Ore"
 }

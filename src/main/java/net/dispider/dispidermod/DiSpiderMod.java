@@ -62,11 +62,14 @@ public class DiSpiderMod
 
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.Money);
+            event.accept(ModItems.Bitcoin);
+            event.accept(ModItems.Rainbow);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.BLUE_LOG);
             event.accept(ModBlocks.BLUE_PLANK);
             event.accept(ModBlocks.RAINBOW_BLOCK);
+            event.accept(ModBlocks.RAINBOW_ORE);
         }
     }
 

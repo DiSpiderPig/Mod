@@ -1,10 +1,12 @@
 package net.dispider.dispidermod.blocks;
 
 import net.dispider.dispidermod.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.dispider.dispidermod.DiSpiderMod;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -26,6 +28,15 @@ public class ModBlocks {
             .strength(2f).sound(SoundType.CHERRY_WOOD)));
     public static final RegistryObject<Block> BLUE_PLANK = registerBlock("blue_plank",()->new Block(BlockBehaviour.Properties.of()
             .strength(2f).sound(SoundType.CHERRY_WOOD)));
+
+    public static final RegistryObject<Block> RAINBOW_ORE = registerBlock("rainbow_ore",()->new DropExperienceBlock(UniformInt.of(2,4),BlockBehaviour.Properties.of()
+            .strength(4f).sound(SoundType.NETHER_GOLD_ORE).requiresCorrectToolForDrops()));
+
+
+
+
+
+
 
 
     private static<T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
