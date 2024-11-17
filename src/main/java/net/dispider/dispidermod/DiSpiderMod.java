@@ -71,6 +71,9 @@ public class DiSpiderMod
             event.accept(ModBlocks.RAINBOW_BLOCK);
             event.accept(ModBlocks.RAINBOW_ORE);
         }
+        if(event.getTabKey() == CreativeModeTabs.COMBAT){
+            event.accept(ModItems.Ruga);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

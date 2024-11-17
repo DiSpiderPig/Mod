@@ -1,5 +1,6 @@
 package net.dispider.dispidermod.item.custom;
 
+import net.dispider.dispidermod.Ruga;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Position;
@@ -38,7 +39,7 @@ public class RugaItem extends Item implements ProjectileItem {
     @Override
     public InteractionResultHolder<ItemStack> use(Level p_333953_, Player p_328676_, InteractionHand p_332155_) {
         if (!p_333953_.isClientSide()) {
-            WindCharge windcharge = new WindCharge(
+            Ruga windcharge = new Ruga(
                     p_328676_, p_333953_, p_328676_.position().x(), p_328676_.getEyePosition().y(), p_328676_.position().z()
             );
             windcharge.shootFromRotation(p_328676_, p_328676_.getXRot(), p_328676_.getYRot(), 0.0F, 1.5F, 1.0F);
@@ -58,7 +59,7 @@ public class RugaItem extends Item implements ProjectileItem {
         ItemStack itemstack = p_328676_.getItemInHand(p_332155_);
         p_328676_.getCooldowns().addCooldown(this, 10);
         p_328676_.awardStat(Stats.ITEM_USED.get(this));
-        itemstack.consume(0, p_328676_);
+        itemstack.hurtAndBreak(1,p_328676_,LivingEntity.getSlotForHand(p_332155_));
         return InteractionResultHolder.sidedSuccess(itemstack, p_333953_.isClientSide());
     }
 

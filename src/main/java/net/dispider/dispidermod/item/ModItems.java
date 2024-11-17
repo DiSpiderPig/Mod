@@ -1,6 +1,7 @@
 package net.dispider.dispidermod.item;
 
 import net.dispider.dispidermod.DiSpiderMod;
+import net.dispider.dispidermod.item.custom.RugaItem;
 import net.minecraft.world.item.DiscFragmentItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,6 +16,8 @@ public class ModItems {
 
    public static final RegistryObject<Item> Bitcoin = ITEMS.register("bitcoin",()->new Item((new Item.Properties())));
    public static final RegistryObject<Item> Rainbow = ITEMS.register("rainbow",()->new Item((new Item.Properties())));
+
+   public static final RegistryObject<Item> Ruga = ITEMS.register("ruga",()->new RugaItem(new Item.Properties().durability(8)));
 
 
    public static void register(IEventBus eventbus){
