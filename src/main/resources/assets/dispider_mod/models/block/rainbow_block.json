@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "dispider_mod:block/rainbow_block"
-  }
-}

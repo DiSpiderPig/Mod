@@ -1,8 +1,9 @@
 package net.dispider.dispidermod;
 
 import com.mojang.logging.LogUtils;
-import net.dispider.dispidermod.blocks.ModBlocks;
+import net.dispider.dispidermod.block.ModBlocks;
 import net.dispider.dispidermod.item.ModItems;
+import net.dispider.dispidermod.util.ModTags;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -64,17 +65,30 @@ public class DiSpiderMod
             event.accept(ModItems.Money);
             event.accept(ModItems.Bitcoin);
             event.accept(ModItems.Rainbow);
+            event.accept(ModItems.Spanakoruzi);
+            event.accept(ModItems.Petrol);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.BLUE_LOG);
             event.accept(ModBlocks.BLUE_PLANK);
             event.accept(ModBlocks.RAINBOW_BLOCK);
             event.accept(ModBlocks.RAINBOW_ORE);
+            event.accept(ModBlocks.MOKIP);
+            event.accept(ModBlocks.BlUE_PRESSURE_PLATE);
+            event.accept(ModBlocks.BlUE_SLAB);
+            event.accept(ModBlocks.BlUE_STAIRS);
+            event.accept(ModBlocks.BlUE_BUTTON);
+            event.accept(ModBlocks.BlUE_TRAP_DOOR);
+            event.accept(ModBlocks.BlUE_DOOR);
+            event.accept(ModBlocks.BlUE_WALL);
+            event.accept(ModBlocks.BlUE_FENCE);
+            event.accept(ModBlocks.BlUE_FENCE_GATE);
         }
         if(event.getTabKey() == CreativeModeTabs.COMBAT){
             event.accept(ModItems.Ruga);
         }
     }
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

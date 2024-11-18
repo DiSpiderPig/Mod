@@ -6,5 +6,17 @@
   "item.dispider_mod.bitcoin": "Bitcoin",
   "item.dispider_mod.rainbow": "Rainbow",
   "block.dispider_mod.rainbow_ore": "Rainbow Ore",
-  "item.dispider_mod.ruga": "Ruga Wand"
+  "item.dispider_mod.ruga": "Ruga Wand",
+  "block.dispider_mod.mokip": "Mokip",
+  "item.dispider_mod.spanakoruzi": "Spanakoruzo",
+  "item.dispider_mod.petrol": "Petrol",
+  "block.dispider_mod.blue_stairs": "Blue Stairs",
+  "block.dispider_mod.blue_fence": "Blue Fence",
+  "block.dispider_mod.blue_fence_gate": "Blue Fence Gate",
+  "block.dispider_mod.blue_wall": "Blue Wall",
+  "block.dispider_mod.blue_buttom": "Blue Button",
+  "block.dispider_mod.blue_slab": "Blue Slab",
+  "block.dispider_mod.blue_door": "Blue Door",
+  "block.dispider_mod.blue_trap_door": "Blue Trap Door",
+  "block.dispider_mod.blue_pressure_plate": "Blue Pressure Plate"
 }
