@@ -2,8 +2,18 @@ package net.dispider.dispidermod;
 
 import com.mojang.logging.LogUtils;
 import net.dispider.dispidermod.block.ModBlocks;
+import net.dispider.dispidermod.component.ModDataComponents;
+import net.dispider.dispidermod.effect.ModEffects;
+import net.dispider.dispidermod.enchantment.ModEnchantmentEffects;
+import net.dispider.dispidermod.entity.ModEntities;
 import net.dispider.dispidermod.item.ModItems;
+import net.dispider.dispidermod.potion.ModPotions;
+import net.dispider.dispidermod.sound.ModSounds;
+import net.dispider.dispidermod.util.ModItemProperties;
 import net.dispider.dispidermod.util.ModTags;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -18,15 +28,19 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DiSpiderMod.EXAMPLEMOD)
+
 public class DiSpiderMod
 {
     // Define mod id in a common place for everything to reference
     public static final String EXAMPLEMOD = "dispider_mod";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
+
 
 
 
@@ -44,12 +58,19 @@ public class DiSpiderMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModDataComponents.register(modEventBus);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
+        ModEntities.register(modEventBus);
+        ModPotions.register(modEventBus);
+        ModEnchantmentEffects.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -66,12 +87,18 @@ public class DiSpiderMod
             event.accept(ModItems.Bitcoin);
             event.accept(ModItems.Rainbow);
             event.accept(ModItems.Spanakoruzi);
+            event.accept(ModItems.TOMATO_SEEDS);
             event.accept(ModItems.Petrol);
+            event.accept(ModItems.VAPE);
+            event.accept(ModItems.MOONTALE_MUSIC_DISC);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.BLUE_LOG);
             event.accept(ModBlocks.BLUE_PLANK);
             event.accept(ModBlocks.RAINBOW_BLOCK);
+            event.accept(ModBlocks.END_RAINBOW_ORE);
+            event.accept(ModBlocks.RAINBOW_DEEPSLATE_ORE);
+            event.accept(ModBlocks.NETHER_RAINBOW_ORE);
             event.accept(ModBlocks.RAINBOW_ORE);
             event.accept(ModBlocks.MOKIP);
             event.accept(ModBlocks.BlUE_PRESSURE_PLATE);
@@ -83,9 +110,33 @@ public class DiSpiderMod
             event.accept(ModBlocks.BlUE_WALL);
             event.accept(ModBlocks.BlUE_FENCE);
             event.accept(ModBlocks.BlUE_FENCE_GATE);
+            event.accept(ModBlocks.SMILEY_FACE_LAMP);
         }
+
         if(event.getTabKey() == CreativeModeTabs.COMBAT){
             event.accept(ModItems.Ruga);
+            event.accept(ModItems.EMERALD_SWORD);
+            event.accept(ModItems.Katana);
+            event.accept(ModItems.RedKatana);
+            event.accept(ModItems.PinkKatana);
+            event.accept(ModItems.GreenKatana);
+            event.accept(ModItems.BlackKatana);
+            event.accept(ModItems.OrangeKatana);
+            event.accept(ModItems.RAINBOW_HAMMER);
+            event.accept(ModItems.EMERALD_HELMET);
+            event.accept(ModItems.EMERALD_CHESTPLATE);
+            event.accept(ModItems.EMERALD_LEGGINS);
+            event.accept(ModItems.EMERALD_BOOTS);
+            event.accept(ModItems.EMERALD_HORSE_ARMOR);
+            event.accept(ModItems.EPIC_BOW);
+            event.accept(ModItems.Pokeball);
+            event.accept(ModItems.SkeletonPokeball);
+        }
+        if(event.getTabKey()==CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.EMERALD_AXE);
+            event.accept(ModItems.EMERALD_HOE);
+            event.accept(ModItems.EMERALD_PICKAXE);
+            event.accept(ModItems.EMERALD_SHOVEL);
         }
     }
 
@@ -104,7 +155,18 @@ public class DiSpiderMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            ModItemProperties.addCustomProperties();
+            EntityRenderers.register(ModEntities.POKEBALL_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.creeperPOKEBALL_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.zombiePOKEBALL_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.SlimePOKEBALL_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.spidercreeperPOKEBALL_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.SkeletonPOKEBALL_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.Masterball_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.EnderDragonPROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.WitherPROJECTILE.get(), ThrownItemRenderer::new);
 
         }
     }
+
 }

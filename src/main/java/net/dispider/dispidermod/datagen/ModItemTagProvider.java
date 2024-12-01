@@ -7,6 +7,8 @@ import net.dispider.dispidermod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -24,6 +26,17 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ModTags.Items.COOL_ITEMS)
                 .add(ModItems.Ruga.get())
                 .add(ModItems.Ruga.get());
+        tag(ItemTags.PLANKS).add(Item.byBlock(ModBlocks.BLUE_PLANK.get()));
+        tag(ItemTags.TRIMMABLE_ARMOR).add(ModItems.EMERALD_BOOTS.get())
+                .add(ModItems.EMERALD_LEGGINS.get())
+                .add(ModItems.EMERALD_CHESTPLATE.get())
+                .add(ModItems.EMERALD_HELMET.get());
+        tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.Rainbow.get());
+        tag(ItemTags.TRIM_TEMPLATES)
+                .add(ModItems.PEACE_SMITHING_TEMPLATE.get());
+        tag(ItemTags.WEAPON_ENCHANTABLE).add(ModItems.Ruga.get());
+        tag(ItemTags.WEAPON_ENCHANTABLE).add(ModItems.RugaUsed.get());
 
     }
 }

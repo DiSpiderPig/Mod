@@ -6,6 +6,7 @@ import net.dispider.dispidermod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -36,6 +37,56 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('A', Items.ROTTEN_FLESH.asItem())
                 .unlockedBy(getHasName(Items.ROTTEN_FLESH.asItem()), has(Items.ROTTEN_FLESH.asItem())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,ModItems.EMERALD_AXE.get())
+                        .pattern("AA")
+                                .pattern("XA")
+                                        .pattern(" X")
+                                                .define('A',Items.EMERALD.asItem())
+                                                        .define('X',Items.STICK.asItem())
+                                                                .unlockedBy(getHasName(Items.EMERALD.asItem()),has(Items.EMERALD.asItem())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,ModItems.EMERALD_SWORD.get())
+                .pattern("A")
+                .pattern("A")
+                .pattern("X")
+                .define('A',Items.EMERALD.asItem())
+                .define('X',Items.STICK.asItem())
+                .unlockedBy(getHasName(Items.EMERALD.asItem()),has(Items.EMERALD.asItem())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,ModItems.EMERALD_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" X ")
+                .pattern(" X ")
+                .define('A',Items.EMERALD.asItem())
+                .define('X',Items.STICK.asItem())
+                .unlockedBy(getHasName(Items.EMERALD.asItem()),has(Items.EMERALD.asItem())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,ModItems.EMERALD_SHOVEL.get())
+                .pattern("A")
+                .pattern("X")
+                .pattern("X")
+                .define('A',Items.EMERALD.asItem())
+                .define('X',Items.STICK.asItem())
+                .unlockedBy(getHasName(Items.EMERALD.asItem()),has(Items.EMERALD.asItem())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,ModItems.EMERALD_HOE.get())
+                .pattern("AA")
+                .pattern(" X")
+                .pattern(" X")
+                .define('A',Items.EMERALD.asItem())
+                .define('X',Items.STICK.asItem())
+                .unlockedBy(getHasName(Items.EMERALD.asItem()),has(Items.EMERALD.asItem())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,ModItems.RAINBOW_HAMMER.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern(" X ")
+                .define('A',Items.DIAMOND_PICKAXE)
+                .define('X',Items.STICK.asItem())
+                .unlockedBy(getHasName(Items.DIAMOND_PICKAXE.asItem()),has(Items.DIAMOND_PICKAXE.asItem())).save(pRecipeOutput);
+
+
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.Ruga.get())
                 .pattern("A")
                 .pattern("B")
@@ -48,7 +99,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModItems.Bitcoin.get()),has(ModItems.Bitcoin.get())).save(pRecipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.Spanakoruzi.get(),1)
-                .requires(ModItems.Bitcoin.get())
+                .requires(Items.ROTTEN_FLESH.asItem())
                 .requires(Items.BOWL.asItem())
                 .unlockedBy(getHasName(Items.BOWL.asItem()),has(Items.ROTTEN_FLESH.asItem())).save(pRecipeOutput);
 
@@ -56,6 +107,25 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ModBlocks.RAINBOW_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAINBOW_BLOCK.get()),
                         has(ModBlocks.RAINBOW_BLOCK.get())).save(pRecipeOutput, DiSpiderMod.EXAMPLEMOD+":money_from_rainbow_block");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.Soul2.get(),1)
+                .requires(ModItems.Soul.get(),2)
+                .unlockedBy(getHasName(ModItems.Soul.get()),has(ModItems.Soul.get())).save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.Soul3.get(),1)
+                .requires(ModItems.Soul2.get())
+                .requires(ModItems.Soul.get())
+                .unlockedBy(getHasName(ModItems.Soul2.get()),has(ModItems.Soul2.get())).save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.Soul4.get(),1)
+                .requires(ModItems.Soul3.get())
+                .requires(ModItems.Soul.get())
+                .unlockedBy(getHasName(ModItems.Soul.get()),has(ModItems.Soul3.get())).save(pRecipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.Soul5.get(),1)
+                .requires(ModItems.Soul4.get())
+                .requires(ModItems.Soul.get())
+                .unlockedBy(getHasName(ModItems.Soul.get()),has(ModItems.Soul3.get())).save(pRecipeOutput);
+
 
         oreSmelting(pRecipeOutput, BITCOIN,RecipeCategory.MISC,Items.COAL,20f,200,"coal");
         oreBlasting(pRecipeOutput, BITCOIN,RecipeCategory.MISC,Items.COAL,20f,100,"coal");
@@ -79,6 +149,11 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModBlocks.BLUE_PLANK.get()), has(ModBlocks.BLUE_PLANK.get())).save(pRecipeOutput);
         trapdoorBuilder(ModBlocks.BlUE_TRAP_DOOR.get(), Ingredient.of(ModBlocks.BlUE_TRAP_DOOR.get())).group("blue")
                 .unlockedBy(getHasName(ModBlocks.BLUE_PLANK.get()), has(ModBlocks.BLUE_PLANK.get())).save(pRecipeOutput);
+
+        trimSmithing(pRecipeOutput,ModItems.PEACE_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD
+        ,"peace"));
+
+
 
 
 

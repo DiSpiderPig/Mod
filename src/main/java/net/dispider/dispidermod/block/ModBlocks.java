@@ -1,6 +1,8 @@
 package net.dispider.dispidermod.block;
 
 import net.dispider.dispidermod.block.custom.Mokip;
+import net.dispider.dispidermod.block.custom.Smiley_Face_Lamp;
+import net.dispider.dispidermod.block.custom.TomatoCropBlock;
 import net.dispider.dispidermod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -31,7 +33,16 @@ public class ModBlocks {
             .strength(2f).sound(SoundType.CHERRY_WOOD)));
 
     public static final RegistryObject<Block> RAINBOW_ORE = registerBlock("rainbow_ore",()->new DropExperienceBlock(UniformInt.of(2,4),BlockBehaviour.Properties.of()
-            .strength(4f).sound(SoundType.NETHER_GOLD_ORE).requiresCorrectToolForDrops()));
+            .strength(3f).sound(SoundType.NETHER_GOLD_ORE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> NETHER_RAINBOW_ORE = registerBlock("nether_rainbow_ore",()->new DropExperienceBlock(UniformInt.of(3,6),BlockBehaviour.Properties.of()
+            .strength(3f).sound(SoundType.NETHER_GOLD_ORE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> END_RAINBOW_ORE = registerBlock("end_rainbow_ore",()->new DropExperienceBlock(UniformInt.of(2,4),BlockBehaviour.Properties.of()
+            .strength(2f).sound(SoundType.NETHER_GOLD_ORE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RAINBOW_DEEPSLATE_ORE = registerBlock("deepslate_rainbow_ore",()->new DropExperienceBlock(UniformInt.of(3,6),BlockBehaviour.Properties.of()
+            .strength(4f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MOKIP = registerBlock("mokip",()->new Mokip(BlockBehaviour.Properties.of().strength(1f).sound(SoundType.AZALEA_LEAVES)));
 
@@ -44,7 +55,7 @@ public class ModBlocks {
 
     public static final RegistryObject<PressurePlateBlock> BlUE_PRESSURE_PLATE = registerBlock("blue_pressure_plate",()->new PressurePlateBlock(BlockSetType.IRON,
             BlockBehaviour.Properties.of().strength(1f)));
-    public static final RegistryObject<ButtonBlock> BlUE_BUTTON = registerBlock("blue_button",()->new ButtonBlock(BlockSetType.IRON,1,
+    public static final RegistryObject<ButtonBlock> BlUE_BUTTON = registerBlock("blue_button",()->new ButtonBlock(BlockSetType.IRON,3,
             BlockBehaviour.Properties.of().strength(1f).noCollission()));
 
 
@@ -63,6 +74,11 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().strength(1f).noOcclusion()));
     public static final RegistryObject<TrapDoorBlock> BlUE_TRAP_DOOR = registerBlock("blue_trap_door",()->new TrapDoorBlock(BlockSetType.IRON,
             BlockBehaviour.Properties.of().strength(1f).noOcclusion()));
+
+    public static final RegistryObject<Block> SMILEY_FACE_LAMP = registerBlock("smiley_face_lamp",()->new Smiley_Face_Lamp(BlockBehaviour.Properties.of().strength(1f)
+            .lightLevel(state ->state.getValue(Smiley_Face_Lamp.CLICKED)? 15:0)));
+    public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop",()-> new TomatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
 
 
 

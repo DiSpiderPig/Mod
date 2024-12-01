@@ -1,9 +1,13 @@
 package net.dispider.dispidermod.item.custom;
 
 import net.dispider.dispidermod.Ruga;
+import net.dispider.dispidermod.component.ModDataComponents;
+import net.dispider.dispidermod.item.ModItems;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Position;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -20,6 +24,7 @@ import net.minecraft.world.entity.projectile.windcharge.WindCharge;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileItem;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -27,17 +32,19 @@ import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.List;
+
 import static net.minecraft.world.entity.player.Player.*;
 
 public class RugaItem extends Item implements ProjectileItem {
-    private static final int COOLDOWN = 10;
+    private static final int COOLDOWN = 100;
 
     public RugaItem(Item.Properties p_333764_) {
         super(p_333764_);
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level p_333953_, Player p_328676_, InteractionHand p_332155_) {
+    public InteractionResultHolder<ItemStack> use(Level p_333953_, Player p_328676_, InteractionHand p_332155_){
         if (!p_333953_.isClientSide()) {
             Ruga windcharge = new Ruga(
                     p_328676_, p_333953_, p_328676_.position().x(), p_328676_.getEyePosition().y(), p_328676_.position().z()
@@ -57,11 +64,28 @@ public class RugaItem extends Item implements ProjectileItem {
                 0.4F / (p_333953_.getRandom().nextFloat() * 0.4F + 0.8F)
         );
         ItemStack itemstack = p_328676_.getItemInHand(p_332155_);
-        p_328676_.getCooldowns().addCooldown(this, 10);
+        p_328676_.getCooldowns().addCooldown(this, COOLDOWN);
+
         p_328676_.awardStat(Stats.ITEM_USED.get(this));
         itemstack.hurtAndBreak(1,p_328676_,LivingEntity.getSlotForHand(p_332155_));
+
+
+
         return InteractionResultHolder.sidedSuccess(itemstack, p_333953_.isClientSide());
     }
+
+
+
+    @Override
+    public InteractionResult useOn(UseOnContext pContext) {
+
+        pContext.getItemInHand().set(ModDataComponents.COORDINATES.get(),pContext.getClickedPos());
+
+        return super.useOn(pContext);
+    }
+
+    //pContext.getItemInHand().set(ModDataComponents.COORDINATES.get(),pContext.getClickedPos());
+
 
     @Override
     public Projectile asProjectile(Level p_335187_, Position p_334268_, ItemStack p_330980_, Direction p_331337_) {
@@ -75,7 +99,22 @@ public class RugaItem extends Item implements ProjectileItem {
         return ruga;
     }
 
+    @Override
+    public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
 
+        if(Screen.hasShiftDown()){
+            pTooltipComponents.add(Component.translatable("Shoot and save your coordinates!"));
+        }
+        else{
+            pTooltipComponents.add(Component.translatable("Shoot to ascend!"));
+        }
+        if(pStack.get(ModDataComponents.COORDINATES.get()) != null){
+            pTooltipComponents.add(Component.literal("Last Block Shot: "+pStack.get(ModDataComponents.COORDINATES.get())));
+
+        }
+
+        super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+    }
 
     @Override
     public void shoot(Projectile p_331638_, double p_331384_, double p_329200_, double p_331035_, float p_335278_, float p_332729_) {

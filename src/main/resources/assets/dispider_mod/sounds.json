@@ -1,0 +1,16 @@
+{
+  "use_vape": {
+    "subtitle": "sounds.dispider_mod.use_vape",
+    "sounds": [
+      "dispider_mod:use_vape"
+    ]
+  },
+  "moontale": {
+    "sounds": [
+      {
+        "name": "dispider_mod:moontale",
+        "stream": true
+      }
+    ]
+  }
+}

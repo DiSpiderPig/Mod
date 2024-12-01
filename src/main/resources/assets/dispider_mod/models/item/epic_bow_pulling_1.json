@@ -1,0 +1,6 @@
+{
+  "parent": "dispider_mod:item/epic_bow",
+  "textures": {
+    "layer0": "dispider_mod:item/epic_bow_pulling_1"
+  }
+}
