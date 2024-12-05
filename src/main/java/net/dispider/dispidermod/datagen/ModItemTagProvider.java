@@ -37,6 +37,13 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.PEACE_SMITHING_TEMPLATE.get());
         tag(ItemTags.WEAPON_ENCHANTABLE).add(ModItems.Ruga.get());
         tag(ItemTags.WEAPON_ENCHANTABLE).add(ModItems.RugaUsed.get());
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.BLUE_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_BLUE_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_BLUE_LOG.get().asItem())
+                .add(ModBlocks.BLUE_WOOD.get().asItem());
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.BLUE_PLANK.get().asItem());
 
     }
 }

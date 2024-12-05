@@ -42,7 +42,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FENCES).add(ModBlocks.BlUE_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.BlUE_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.BlUE_WALL.get());
-        tag(BlockTags.PLANKS).add(ModBlocks.BLUE_PLANK.get());
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                        .add(ModBlocks.BLUE_LOG.get())
+                        .add(ModBlocks.STRIPPED_BLUE_WOOD.get())
+                        .add(ModBlocks.BLUE_WOOD.get())
+                        .add(ModBlocks.STRIPPED_BLUE_LOG.get());
 
         tag(ModTags.Blocks.NEEDS_EMERALD_TOOL)
                 .add(ModBlocks.RAINBOW_ORE.get())

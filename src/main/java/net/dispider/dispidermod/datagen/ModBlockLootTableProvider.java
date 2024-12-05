@@ -37,8 +37,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
        dropSelf(ModBlocks.END_RAINBOW_ORE.get());
        dropSelf(ModBlocks.NETHER_RAINBOW_ORE.get());
        dropSelf(ModBlocks.RAINBOW_DEEPSLATE_ORE.get());
-       dropSelf(ModBlocks.BLUE_LOG.get());
-       dropSelf(ModBlocks.BLUE_PLANK.get());
+       dropSelf(ModBlocks.MONEY_PRINTER.get());
+
        dropSelf(ModBlocks.MOKIP.get());
        dropSelf(ModBlocks.BlUE_STAIRS.get());
        this.add(ModBlocks.BlUE_SLAB.get(),block -> createSlabItemTable(ModBlocks.BlUE_SLAB.get()));
@@ -49,6 +49,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
        dropSelf(ModBlocks.BlUE_PRESSURE_PLATE.get());
        dropSelf(ModBlocks.BlUE_BUTTON.get());
        dropSelf(ModBlocks.BlUE_WALL.get());
+       dropSelf(ModBlocks.BLUE_PLANK.get());
+      this.add(ModBlocks.BLUE_LEAVES.get(),block -> createLeavesDrops(block,ModBlocks.BLUE_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES));
+       dropSelf(ModBlocks.BLUE_LOG.get());
+       dropSelf(ModBlocks.BLUE_SAPLING.get());
+       dropSelf(ModBlocks.BLUE_WOOD.get());
+       dropSelf(ModBlocks.STRIPPED_BLUE_WOOD.get());
+       dropSelf(ModBlocks.STRIPPED_BLUE_LOG.get());
        dropSelf(ModBlocks.SMILEY_FACE_LAMP.get());
 
         LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.TOMATO_CROP.get())

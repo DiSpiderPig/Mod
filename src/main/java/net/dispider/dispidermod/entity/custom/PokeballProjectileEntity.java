@@ -37,31 +37,34 @@ public PokeballProjectileEntity(LivingEntity livingEntity, Level pLevel) {
     protected void onHitEntity(EntityHitResult pResult) {
         if(!this.level().isClientSide()){
 
-            pResult.getEntity().hurt(pResult.getEntity().damageSources().magic(),4f);
-            if(pResult.getEntity() instanceof Skeleton skeleton){
-                level().getNearestPlayer(pResult.getEntity(),50).addItem(new ItemStack (ModItems.SkeletonPokeball.get()));
-                this.discard();
-                pResult.getEntity().kill();
-            }
-            if(pResult.getEntity() instanceof Slime skeleton){
-                level().getNearestPlayer(pResult.getEntity(),50).addItem(new ItemStack (ModItems.SlimePokeball.get()));
-                this.discard();
-                pResult.getEntity().kill();
-            }
-            if(pResult.getEntity() instanceof Zombie skeleton){
-                level().getNearestPlayer(pResult.getEntity(),50).addItem(new ItemStack (ModItems.ZombiePokeball.get()));
-                this.discard();
-                pResult.getEntity().kill();
-            }
-            if(pResult.getEntity() instanceof Spider skeleton){
-                level().getNearestPlayer(pResult.getEntity(),50).addItem(new ItemStack (ModItems.SpiderPokeball.get()));
-                this.discard();
-                pResult.getEntity().kill();
-            }
-            if(pResult.getEntity() instanceof Creeper skeleton){
-                level().getNearestPlayer(pResult.getEntity(),50).addItem(new ItemStack (ModItems.CreeperPokeball.get()));
-                this.discard();
-                pResult.getEntity().kill();
+            if(!this.level().isClientSide()){
+                pResult.getEntity().hurt(pResult.getEntity().damageSources().magic(),4f);
+                if(pResult.getEntity() instanceof Skeleton skeleton){
+                    level().getNearestPlayer(pResult.getEntity(),5000).addItem(new ItemStack (ModItems.SkeletonPokeball.get()));
+                    this.discard();
+                    pResult.getEntity().kill();
+                }
+                if(pResult.getEntity() instanceof Slime skeleton){
+                    level().getNearestPlayer(pResult.getEntity(),5000).addItem(new ItemStack (ModItems.SlimePokeball.get()));
+                    this.discard();
+                    pResult.getEntity().kill();
+                }
+                if(pResult.getEntity() instanceof Zombie skeleton){
+                    level().getNearestPlayer(pResult.getEntity(),5000).addItem(new ItemStack (ModItems.ZombiePokeball.get()));
+                    this.discard();
+                    pResult.getEntity().kill();
+                }
+                if(pResult.getEntity() instanceof Spider skeleton){
+                    level().getNearestPlayer(pResult.getEntity(),5000).addItem(new ItemStack (ModItems.SpiderPokeball.get()));
+                    this.discard();
+                    pResult.getEntity().kill();
+                }
+                if(pResult.getEntity() instanceof Creeper skeleton){
+                    level().getNearestPlayer(pResult.getEntity(),5000).addItem(new ItemStack (ModItems.CreeperPokeball.get()));
+                    this.discard();
+                    pResult.getEntity().kill();
+                }
+
             }
 
         }

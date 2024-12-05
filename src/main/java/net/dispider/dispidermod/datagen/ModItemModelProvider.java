@@ -93,6 +93,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.EMERALD_CHESTPLATE);
         trimmedArmorItem(ModItems.EMERALD_LEGGINS);
         trimmedArmorItem(ModItems.EMERALD_BOOTS);
+        saplingItem(ModBlocks.BLUE_SAPLING);
+
 
 
 
@@ -125,6 +127,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"block/" + item.getId().getPath()));
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {

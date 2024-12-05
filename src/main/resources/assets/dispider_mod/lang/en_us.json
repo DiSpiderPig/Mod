@@ -9,6 +9,7 @@
   "block.dispider_mod.deepslate_rainbow_ore": "Deepslate Rainbow Ore",
   "block.dispider_mod.end_rainbow_ore": "End Rainbow Ore",
   "block.dispider_mod.nether_rainbow_ore": "Nether Rainbow Ore",
+  "block.dispider_mod.money_printer": "Money Printer",
   "item.dispider_mod.ruga": "Ruga Wand",
   "block.dispider_mod.mokip": "Mokip",
   "item.dispider_mod.spanakoruzi": "Spanakoruzo",
@@ -44,7 +45,7 @@
   "effect.dispider_mod.cancer": "Cancer",
   "item.minecraft.potion.effect.cancer_potion": "Cancer Potion",
   "item.minecraft.splash_potion.effect.cancer_potion": "Cancer Splash Potion",
-  "item.minecraft.lingering_cancer_potion.effect.cancer_potion": "Cancer Lingering Potion",
+  "item.minecraft.lingering_potion.effect.cancer_potion": "Cancer Lingering Potion",
   "item.dispider_mod.vape": "Vape",
   "painting.dispider_mod.pure_art.title": "Pure art",
   "painting.dispider_mod.pure_art.author": "Me",
@@ -74,5 +75,10 @@
   "item.dispider_mod.ender_dragon_masterball": "Masterball",
   "item.dispider_mod.wither_masterball": "Masterball",
   "block.dispider_mod.tomato_crop": "Tomato Crop",
-  "item.dispider_mod.tomato_seeds": "Tomato Seeds"
+  "item.dispider_mod.tomato_seeds": "Tomato Seeds",
+  "block.dispider_mod.stripped_blue_log": "Stripped Blue Log",
+  "block.dispider_mod.stripped_blue_wood": "Stripped Blue Wood",
+  "block.dispider_mod.blue_wood": "Blue Wood",
+  "block.dispider_mod.blue_leaves": "Blue Leaves",
+  "block.dispider_mod.blue_sapling": "Blue Sapling"
 }

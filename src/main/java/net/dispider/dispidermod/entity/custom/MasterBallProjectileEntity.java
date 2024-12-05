@@ -42,12 +42,12 @@ public class MasterBallProjectileEntity extends ThrowableItemProjectile {
 
             pResult.getEntity().hurt(pResult.getEntity().damageSources().magic(),4f);
             if(pResult.getEntity() instanceof WitherBoss skeleton){
-                level().getNearestPlayer(pResult.getEntity(),50).addItem(new ItemStack (ModItems.WitherMasterball.get()));
+                level().getNearestPlayer(pResult.getEntity(),500).addItem(new ItemStack (ModItems.WitherMasterball.get()));
                 this.discard();
                 pResult.getEntity().kill();
             }
             if(pResult.getEntity() instanceof EnderDragonPart skeleton){
-                level().getNearestPlayer(pResult.getEntity(),50).addItem(new ItemStack (ModItems.EnderDragonMasterball.get()));
+                level().getNearestPlayer(pResult.getEntity(),500).addItem(new ItemStack (ModItems.EnderDragonMasterball.get()));
                 this.discard();
                 skeleton.parentMob.kill();
             }

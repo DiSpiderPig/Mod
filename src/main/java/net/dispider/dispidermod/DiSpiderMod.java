@@ -2,15 +2,19 @@ package net.dispider.dispidermod;
 
 import com.mojang.logging.LogUtils;
 import net.dispider.dispidermod.block.ModBlocks;
+import net.dispider.dispidermod.block.entity.ModBlockEntities;
 import net.dispider.dispidermod.component.ModDataComponents;
 import net.dispider.dispidermod.effect.ModEffects;
 import net.dispider.dispidermod.enchantment.ModEnchantmentEffects;
 import net.dispider.dispidermod.entity.ModEntities;
 import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.potion.ModPotions;
+import net.dispider.dispidermod.screen.ModMenuTypes;
+import net.dispider.dispidermod.screen.MoneyPrinterScreen;
 import net.dispider.dispidermod.sound.ModSounds;
 import net.dispider.dispidermod.util.ModItemProperties;
 import net.dispider.dispidermod.util.ModTags;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.entity.player.Player;
@@ -69,6 +73,8 @@ public class DiSpiderMod
         ModSounds.register(modEventBus);
         ModEffects.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModPotions.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
     }
@@ -165,6 +171,7 @@ public class DiSpiderMod
             EntityRenderers.register(ModEntities.Masterball_PROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.EnderDragonPROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.WitherPROJECTILE.get(), ThrownItemRenderer::new);
+            MenuScreens.register(ModMenuTypes.MONEY_PRINTER_MENU.get(), MoneyPrinterScreen::new);
 
         }
     }
