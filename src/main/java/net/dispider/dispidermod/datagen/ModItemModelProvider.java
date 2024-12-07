@@ -94,6 +94,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.EMERALD_LEGGINS);
         trimmedArmorItem(ModItems.EMERALD_BOOTS);
         saplingItem(ModBlocks.BLUE_SAPLING);
+        saplingItem(ModBlocks.WHITE_SAPLING);
 
 
 

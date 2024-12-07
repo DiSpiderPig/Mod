@@ -111,7 +111,7 @@ public class ModMoneyPrinterBlockEntity extends BlockEntity implements MenuProvi
     @Override
     protected void saveAdditional(CompoundTag pTag, HolderLookup.Provider pRegistries) {
         pTag.put("inventory",itemHandler.serializeNBT(pRegistries));
-        pTag.putInt("money_printer.progress",progress);
+        pTag.putInt("money_printer_progress",progress);
         super.saveAdditional(pTag, pRegistries);
     }
 
@@ -124,6 +124,9 @@ public class ModMoneyPrinterBlockEntity extends BlockEntity implements MenuProvi
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
+
+
+
 
         if(hasRecipe()){
             increaseCraftingProgress();
@@ -162,8 +165,8 @@ public class ModMoneyPrinterBlockEntity extends BlockEntity implements MenuProvi
     }
 
     private boolean hasRecipe() {
-        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == Items.GOLD_BLOCK.asItem();
-        ItemStack result = new ItemStack(Items.GOLD_BLOCK.asItem());
+        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ModItems.Bitcoin.get();
+        ItemStack result = new ItemStack(ModItems.Money.get());
         return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
     }
 

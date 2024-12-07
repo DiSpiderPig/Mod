@@ -14,6 +14,8 @@ import net.dispider.dispidermod.screen.MoneyPrinterScreen;
 import net.dispider.dispidermod.sound.ModSounds;
 import net.dispider.dispidermod.util.ModItemProperties;
 import net.dispider.dispidermod.util.ModTags;
+import net.dispider.dispidermod.worldgen.tree.ModFoliagePlacer;
+import net.dispider.dispidermod.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
@@ -75,6 +77,8 @@ public class DiSpiderMod
         ModEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModTrunkPlacerTypes.register(modEventBus);
+        ModFoliagePlacer.register(modEventBus);
         ModPotions.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
     }

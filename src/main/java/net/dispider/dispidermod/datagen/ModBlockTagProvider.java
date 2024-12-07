@@ -46,8 +46,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         .add(ModBlocks.BLUE_LOG.get())
                         .add(ModBlocks.STRIPPED_BLUE_WOOD.get())
                         .add(ModBlocks.BLUE_WOOD.get())
-                        .add(ModBlocks.STRIPPED_BLUE_LOG.get());
-
+                        .add(ModBlocks.STRIPPED_BLUE_LOG.get())
+                .add(ModBlocks.WHITE_WOOD.get())
+                .add(ModBlocks.STRIPPED_WHITE_WOOD.get())
+                .add(ModBlocks.WHITE_LOG.get())
+                .add(ModBlocks.STRIPPED_WHITE_LOG.get());
+        tag(BlockTags.PLANKS).add(ModBlocks.BLUE_PLANK.get()).add(ModBlocks.WHITE_PLANK.get());
         tag(ModTags.Blocks.NEEDS_EMERALD_TOOL)
                 .add(ModBlocks.RAINBOW_ORE.get())
                 .add(ModBlocks.END_RAINBOW_ORE.get())

@@ -48,6 +48,24 @@ public class ModBlocks {
                 }
             });
 
+    public static final RegistryObject<Block> WHITE_PLANK = registerBlock("white_plank",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+
     public static final RegistryObject<Block> BLUE_LEAVES = registerBlock("blue_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
                 @Override
@@ -66,9 +84,28 @@ public class ModBlocks {
                 }
             });
 
+    public static final RegistryObject<Block> WHITE_LEAVES = registerBlock("white_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
     public static final RegistryObject<Block> BLUE_SAPLING = registerBlock("blue_sapling",
             () -> new SaplingBlock(ModTreeGrowers.BLUE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
+    public static final RegistryObject<Block> WHITE_SAPLING= registerBlock("white_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.WHITE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
 
     public static final RegistryObject<Block> RAINBOW_ORE = registerBlock("rainbow_ore",()->new DropExperienceBlock(UniformInt.of(2,4),BlockBehaviour.Properties.of()
@@ -132,6 +169,17 @@ public class ModBlocks {
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_BLUE_WOOD = registerBlock("stripped_blue_wood",()-> new ModFlammableRotatedPillarBlock(BlockBehaviour
             .Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
 
+    public static final RegistryObject<RotatedPillarBlock> WHITE_LOG = registerBlock("white_log",()-> new ModFlammableRotatedPillarBlock(BlockBehaviour
+            .Properties.ofFullCopy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<RotatedPillarBlock>  WHITE_WOOD = registerBlock("white_wood",()-> new ModFlammableRotatedPillarBlock(BlockBehaviour
+            .Properties.ofFullCopy(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_WHITE_LOG = registerBlock("stripped_white_log",()-> new ModFlammableRotatedPillarBlock(BlockBehaviour
+            .Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_WHITE_WOOD = registerBlock("stripped_white_wood",()-> new ModFlammableRotatedPillarBlock(BlockBehaviour
+            .Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
 
 
 

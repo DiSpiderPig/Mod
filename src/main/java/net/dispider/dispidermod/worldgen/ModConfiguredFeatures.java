@@ -2,6 +2,8 @@ package net.dispider.dispidermod.worldgen;
 
 import net.dispider.dispidermod.DiSpiderMod;
 import net.dispider.dispidermod.block.ModBlocks;
+import net.dispider.dispidermod.worldgen.tree.custom.WhiteFoliagePlacer;
+import net.dispider.dispidermod.worldgen.tree.custom.WhiteTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -16,8 +18,10 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaPineFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.MegaJungleTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -32,6 +36,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?,?>> END_RAINBOW_ORE_KEY = registerKey("end_rainbow_ore");
 
     public static  final  ResourceKey<ConfiguredFeature<?,?>> BLUE_KEY = registerKey("blue");
+    public static final ResourceKey<ConfiguredFeature<?,?>> WHITE_KEY = registerKey("white");
 
     // CF - > PF - > BM
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -46,6 +51,15 @@ public class ModConfiguredFeatures {
 
                 BlockStateProvider.simple(ModBlocks.BLUE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3),
+
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, WHITE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.WHITE_LOG.get()),
+                new WhiteTrunkPlacer(6, 6, 5),
+
+                BlockStateProvider.simple(ModBlocks.WHITE_LEAVES.get()),
+                new WhiteFoliagePlacer(ConstantInt.of(7), ConstantInt.of(2),3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 

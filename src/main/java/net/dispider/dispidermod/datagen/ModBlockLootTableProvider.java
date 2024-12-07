@@ -7,6 +7,7 @@ import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
@@ -56,6 +57,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
        dropSelf(ModBlocks.BLUE_WOOD.get());
        dropSelf(ModBlocks.STRIPPED_BLUE_WOOD.get());
        dropSelf(ModBlocks.STRIPPED_BLUE_LOG.get());
+        this.add(ModBlocks.WHITE_LEAVES.get(),block -> createLeavesDrops(block,ModBlocks.WHITE_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES));
+        dropSelf(ModBlocks.WHITE_LOG.get());
+        dropSelf(ModBlocks.WHITE_SAPLING.get());
+        dropSelf(ModBlocks.WHITE_WOOD.get());
+        dropSelf(ModBlocks.WHITE_PLANK.get());
+        dropSelf(ModBlocks.STRIPPED_WHITE_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_WHITE_LOG.get());
        dropSelf(ModBlocks.SMILEY_FACE_LAMP.get());
 
         LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.TOMATO_CROP.get())

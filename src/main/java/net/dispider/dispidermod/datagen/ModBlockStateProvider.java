@@ -29,6 +29,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockwithItem(ModBlocks.RAINBOW_BLOCK);
         blockwithItem(ModBlocks.BLUE_PLANK);
+        blockwithItem(ModBlocks.WHITE_PLANK);
         blockwithItem(ModBlocks.MOKIP);
         blockwithItem(ModBlocks.RAINBOW_ORE);
         blockwithItem(ModBlocks.END_RAINBOW_ORE);
@@ -65,6 +66,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         axisBlock(ModBlocks.BLUE_WOOD.get(),blockTexture(ModBlocks.BLUE_LOG.get()),blockTexture(ModBlocks.BLUE_LOG.get())) ;
         logBlock(ModBlocks.STRIPPED_BLUE_LOG.get());
         axisBlock(ModBlocks.STRIPPED_BLUE_WOOD.get(),blockTexture(ModBlocks.STRIPPED_BLUE_LOG.get()),blockTexture(ModBlocks.BLUE_LOG.get())) ;
+        logBlock(ModBlocks.WHITE_LOG.get());
+        axisBlock(ModBlocks.WHITE_WOOD.get(),blockTexture(ModBlocks.WHITE_LOG.get()),blockTexture(ModBlocks.WHITE_LOG.get()));
+        logBlock(ModBlocks.STRIPPED_WHITE_LOG.get());
+        axisBlock(ModBlocks.STRIPPED_WHITE_WOOD.get(),blockTexture(ModBlocks.STRIPPED_WHITE_LOG.get()),blockTexture(ModBlocks.WHITE_LOG.get())) ;
 
 
 
@@ -73,10 +78,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_BLUE_LOG);
         blockItem(ModBlocks.STRIPPED_BLUE_WOOD);
 
+        blockItem(ModBlocks.WHITE_LOG);
+        blockItem(ModBlocks.WHITE_WOOD);
+        blockItem(ModBlocks.STRIPPED_WHITE_LOG);
+        blockItem(ModBlocks.STRIPPED_WHITE_WOOD);
+
 
 
         saplingBlock(ModBlocks.BLUE_SAPLING);
+        saplingBlock(ModBlocks.WHITE_SAPLING);
         leavesBlock(ModBlocks.BLUE_LEAVES);
+        leavesBlock(ModBlocks.WHITE_LEAVES);
+
 
         customLamp();
         makeCrop((CropBlock) ModBlocks.TOMATO_CROP.get(),"tomato_crop_stage","tomato_crop_stage");

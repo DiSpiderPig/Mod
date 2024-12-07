@@ -9,4 +9,6 @@ import java.util.Optional;
 public class ModTreeGrowers {
     public static final TreeGrower BLUE = new TreeGrower(DiSpiderMod.EXAMPLEMOD + ":blue",
             Optional.empty(), Optional.of(ModConfiguredFeatures.BLUE_KEY), Optional.empty());
+    public static final TreeGrower WHITE = new TreeGrower(DiSpiderMod.EXAMPLEMOD + ":white",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.WHITE_KEY), Optional.empty());
 }
