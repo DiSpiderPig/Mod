@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#dispider_mod:needs_emerald_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_iron_tool"
+  ]
+}

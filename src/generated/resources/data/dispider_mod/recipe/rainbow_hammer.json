@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "AAA",
+    " X "
+  ],
+  "result": {
+    "count": 1,
+    "id": "dispider_mod:rainbow_hammer"
+  }
+}

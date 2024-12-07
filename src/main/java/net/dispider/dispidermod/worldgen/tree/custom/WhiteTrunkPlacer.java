@@ -38,8 +38,8 @@ public class WhiteTrunkPlacer extends TrunkPlacer {
   int height = pFreeTreeHeight + pRandom.nextInt(heightRandA,heightRandA+3)+pRandom.nextInt(heightRandB-1,heightRandB+1);
 
 
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 6; j++) {
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 7; j++) {
                 for (int k = 0; k < height; k++) {
                     placeLog(pLevel,pBlockSetter,pRandom,pPos.above(k).east(j).north(i),pConfig);
 

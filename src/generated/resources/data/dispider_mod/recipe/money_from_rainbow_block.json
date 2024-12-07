@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dispider_mod:rainbow_block"
+    }
+  ],
+  "result": {
+    "count": 16,
+    "id": "dispider_mod:money"
+  }
+}

@@ -35,6 +35,8 @@ public class WhiteFoliagePlacer extends FoliagePlacer {
     protected void createFoliage(LevelSimulatedReader pLevel, FoliageSetter pBlockSetter, RandomSource pRandom, TreeConfiguration pConfig, int pMaxFreeTreeHeight, FoliageAttachment pAttachment, int pFoliageHeight, int pFoliageRadius, int pOffset) {
 
         BlockPos blockpos = pAttachment.pos();
+        blockpos.north(3).east(3);        // -3 z      // +3 x
+        System.out.println(blockpos.getX()+ "     "+blockpos.getY()+"     " + blockpos.getZ());
         int i = 0;
 
         for (int j = blockpos.getY() - pFoliageHeight + pOffset; j <= blockpos.getY() + pOffset; j++) {
@@ -47,7 +49,7 @@ public class WhiteFoliagePlacer extends FoliagePlacer {
                 i1 = l;
             }
 
-            this.placeLeavesRow(pLevel, pBlockSetter, pRandom, pConfig, new BlockPos(blockpos.getX(), j, blockpos.getZ()), i1, 0, pAttachment.doubleTrunk());
+            this.placeLeavesRow(pLevel, pBlockSetter, pRandom, pConfig, new BlockPos(blockpos.getX()+3, j, blockpos.getZ()-3), i1, 0, pAttachment.doubleTrunk());
             i = l;
         }
     }

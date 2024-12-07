@@ -56,10 +56,10 @@ public class ModConfiguredFeatures {
 
         register(context, WHITE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.WHITE_LOG.get()),
-                new WhiteTrunkPlacer(6, 6, 5),
+                new WhiteTrunkPlacer(12, 12, 10),
 
                 BlockStateProvider.simple(ModBlocks.WHITE_LEAVES.get()),
-                new WhiteFoliagePlacer(ConstantInt.of(7), ConstantInt.of(2),3),
+                new WhiteFoliagePlacer(ConstantInt.of(7), ConstantInt.of(2),8),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 

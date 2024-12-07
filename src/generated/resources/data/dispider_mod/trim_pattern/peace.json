@@ -1,0 +1,8 @@
+{
+  "asset_id": "dispider_mod:peace",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.dispider_mod.peace"
+  },
+  "template_item": "dispider_mod:peace_armor_trim_smithing_template"
+}

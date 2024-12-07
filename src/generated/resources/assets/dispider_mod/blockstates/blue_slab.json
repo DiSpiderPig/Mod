@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dispider_mod:block/blue_slab"
+    },
+    "type=double": {
+      "model": "dispider_mod:block/blue_plank"
+    },
+    "type=top": {
+      "model": "dispider_mod:block/blue_slab_top"
+    }
+  }
+}

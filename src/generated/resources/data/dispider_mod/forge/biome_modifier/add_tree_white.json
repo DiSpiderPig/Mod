@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_mountain",
+  "features": "dispider_mod:white_placed",
+  "step": "vegetal_decoration"
+}

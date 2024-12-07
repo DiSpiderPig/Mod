@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_snowy",
+  "features": "dispider_mod:blue_placed",
+  "step": "vegetal_decoration"
+}

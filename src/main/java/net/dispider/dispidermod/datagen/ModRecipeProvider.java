@@ -98,6 +98,10 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ModItems.Bitcoin.get())
                 .unlockedBy(getHasName(ModItems.Bitcoin.get()),has(ModItems.Bitcoin.get())).save(pRecipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,ModBlocks.WHITE_PLANK.get(),4)
+                        .requires(ModBlocks.WHITE_LOG.get())
+                                .unlockedBy(getHasName(ModBlocks.WHITE_LOG.get()),has(ModBlocks.WHITE_LOG.get())).save(pRecipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.Spanakoruzi.get(),1)
                 .requires(Items.ROTTEN_FLESH.asItem())
                 .requires(Items.BOWL.asItem())

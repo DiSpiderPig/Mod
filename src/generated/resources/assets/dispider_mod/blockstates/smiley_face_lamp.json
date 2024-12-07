@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "dispider_mod:block/smiley_face_lamp_off"
+    },
+    "clicked=true": {
+      "model": "dispider_mod:block/smiley_face_lamp_on"
+    }
+  }
+}

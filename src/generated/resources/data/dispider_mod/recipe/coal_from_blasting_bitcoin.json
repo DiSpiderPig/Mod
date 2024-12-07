@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 20.0,
+  "group": "coal",
+  "ingredient": {
+    "item": "dispider_mod:bitcoin"
+  },
+  "result": {
+    "id": "minecraft:coal"
+  }
+}

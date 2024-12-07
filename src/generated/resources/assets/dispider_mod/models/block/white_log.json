@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "dispider_mod:block/white_log_top",
+    "side": "dispider_mod:block/white_log"
+  }
+}

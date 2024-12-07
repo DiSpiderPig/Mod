@@ -1,0 +1,9 @@
+{
+  "asset_name": "rainbow",
+  "description": {
+    "color": "#031CFC",
+    "translate": "trim_material.dispider_mod.rainbow"
+  },
+  "ingredient": "dispider_mod:rainbow",
+  "item_model_index": 1.0
+}

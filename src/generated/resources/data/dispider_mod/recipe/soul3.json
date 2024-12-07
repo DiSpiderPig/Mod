@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dispider_mod:soul2"
+    },
+    {
+      "item": "dispider_mod:soul"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dispider_mod:soul3"
+  }
+}
