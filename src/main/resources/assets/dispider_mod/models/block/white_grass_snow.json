@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "dispider_mod:block/white_dirt",
+    "particle": "dispider_mod:block/white_dirt",
+    "side": "dispider_mod:block/white_grass_snow",
+    "top": "dispider_mod:block/white_grass_top"
+  }
+}

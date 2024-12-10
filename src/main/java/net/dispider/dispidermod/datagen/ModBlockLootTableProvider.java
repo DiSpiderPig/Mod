@@ -15,6 +15,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
@@ -39,8 +40,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
        dropSelf(ModBlocks.NETHER_RAINBOW_ORE.get());
        dropSelf(ModBlocks.RAINBOW_DEEPSLATE_ORE.get());
        dropSelf(ModBlocks.MONEY_PRINTER.get());
-
        dropSelf(ModBlocks.MOKIP.get());
+
+
+
        dropSelf(ModBlocks.BlUE_STAIRS.get());
        this.add(ModBlocks.BlUE_SLAB.get(),block -> createSlabItemTable(ModBlocks.BlUE_SLAB.get()));
        this.add(ModBlocks.BlUE_DOOR.get(),block -> createDoorTable(ModBlocks.BlUE_DOOR.get()));
@@ -57,6 +60,37 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
        dropSelf(ModBlocks.BLUE_WOOD.get());
        dropSelf(ModBlocks.STRIPPED_BLUE_WOOD.get());
        dropSelf(ModBlocks.STRIPPED_BLUE_LOG.get());
+
+        dropSelf(ModBlocks.WHITE_STAIRS.get());
+        this.add(ModBlocks.WHITE_SLAB.get(),block -> createSlabItemTable(ModBlocks.WHITE_SLAB.get()));
+        this.add(ModBlocks.WHITE_DOOR.get(),block -> createDoorTable(ModBlocks.WHITE_DOOR.get()));
+        dropSelf(ModBlocks.WHITE_TRAP_DOOR.get());
+        dropSelf(ModBlocks.WHITE_FENCE.get());
+        dropSelf(ModBlocks.WHITE_FENCE_GATE.get());
+        dropSelf(ModBlocks.WHITE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.WHITE_BUTTON.get());
+        dropSelf(ModBlocks.WHITE_WALL.get());
+
+
+        dropSelf(ModBlocks.RED_STAIRS.get());
+        this.add(ModBlocks.RED_SLAB.get(),block -> createSlabItemTable(ModBlocks.RED_SLAB.get()));
+        this.add(ModBlocks.RED_DOOR.get(),block -> createDoorTable(ModBlocks.RED_DOOR.get()));
+        dropSelf(ModBlocks.RED_TRAP_DOOR.get());
+        dropSelf(ModBlocks.RED_FENCE.get());
+        dropSelf(ModBlocks.RED_FENCE_GATE.get());
+        dropSelf(ModBlocks.RED_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.RED_BUTTON.get());
+        dropSelf(ModBlocks.RED_WALL.get());
+        dropSelf(ModBlocks.RED_PLANK.get());
+        this.add(ModBlocks.RED_LEAVES.get(),block -> createLeavesDrops(block,ModBlocks.RED_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES));
+        dropSelf(ModBlocks.RED_LOG.get());
+        dropSelf(ModBlocks.RED_SAPLING.get());
+        dropSelf(ModBlocks.RED_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_RED_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_RED_LOG.get());
+
+
+
         this.add(ModBlocks.WHITE_LEAVES.get(),block -> createLeavesDrops(block,ModBlocks.WHITE_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES));
         dropSelf(ModBlocks.WHITE_LOG.get());
         dropSelf(ModBlocks.WHITE_SAPLING.get());
@@ -71,7 +105,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.TOMATO_CROP.get(), this.createCropDrops(ModBlocks.TOMATO_CROP.get(),
                 ModItems.TOMATO.get(), ModItems.TOMATO_SEEDS.get(), lootItemConditionBuilder));
+        this.add(ModBlocks.WHITE_GRASS.get(),block ->createMultipleDrops(ModBlocks.WHITE_GRASS.get(), Blocks.DIRT.asItem(),1f,1f));
+        this.add(ModBlocks.RED_GRASS.get(),block ->createMultipleDrops(ModBlocks.RED_GRASS.get(), Blocks.DIRT.asItem(),1f,1f));
 
+        this.add(ModBlocks.POKEBLOCK.get(),
+                block -> createMultipleDrops(ModBlocks.RAINBOW_ORE.get(), ModItems.Pokeball.get(),1f,1f));
 
        this.add(ModBlocks.RAINBOW_ORE.get(),
                block -> createMultipleDrops(ModBlocks.RAINBOW_ORE.get(), ModItems.Rainbow.get(),2f,4f));

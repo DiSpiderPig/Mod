@@ -1,9 +1,12 @@
 package net.dispider.dispidermod.event;
 
 import net.dispider.dispidermod.DiSpiderMod;
+import net.dispider.dispidermod.entity.client.GronModel;
+import net.dispider.dispidermod.entity.client.ModModelLayers;
 import net.dispider.dispidermod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ComputeFovModifierEvent;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -23,5 +26,9 @@ public class ModClientEvents {
             fovModifier *= 1f - deltaTicks * 0.15f;
             event.setNewFovModifier(fovModifier);
         }
+    }
+    @SubscribeEvent
+    public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions.RegisterLayerDefinitions event){
+        event.registerLayerDefinition(ModModelLayers.GRON_LAYER, GronModel::createBodyLayer);
     }
 }

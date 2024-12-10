@@ -2,7 +2,9 @@
   "item.dispider_mod.money": "Money",
   "block.dispider_mod.rainbow_block": "Rainbow Block",
   "block.dispider_mod.blue_log":"Blue Log",
+  "block.dispider_mod.white_log":"White Log",
   "block.dispider_mod.blue_plank": "Blue Planks",
+  "block.dispider_mod.white_plank": "White Planks",
   "item.dispider_mod.bitcoin": "Bitcoin",
   "item.dispider_mod.rainbow": "Rainbow",
   "block.dispider_mod.rainbow_ore": "Rainbow Ore",
@@ -77,8 +79,15 @@
   "block.dispider_mod.tomato_crop": "Tomato Crop",
   "item.dispider_mod.tomato_seeds": "Tomato Seeds",
   "block.dispider_mod.stripped_blue_log": "Stripped Blue Log",
+  "block.dispider_mod.stripped_white_log": "Stripped White Log",
+  "block.dispider_mod.stripped_white_wood": "Stripped White Wood",
   "block.dispider_mod.stripped_blue_wood": "Stripped Blue Wood",
   "block.dispider_mod.blue_wood": "Blue Wood",
+  "block.dispider_mod.white_wood": "White Wood",
   "block.dispider_mod.blue_leaves": "Blue Leaves",
-  "block.dispider_mod.blue_sapling": "Blue Sapling"
+  "block.dispider_mod.white_leaves": "White Leaves",
+  "block.dispider_mod.blue_sapling": "Blue Sapling",
+  "block.dispider_mod.white_sapling": "White Sapling",
+  "block.dispider_mod.mod_portal": "????",
+  "block.dispider_mod.white_grass": "White Grass"
 }

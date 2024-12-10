@@ -1,30 +1,25 @@
-package net.dispider.dispidermod.entity.custom;
+package net.dispider.dispidermod.entity.custom.projectile;
 
 import net.dispider.dispidermod.entity.ModEntities;
 import net.dispider.dispidermod.item.ModItems;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Creeper;
-import net.minecraft.world.entity.monster.Skeleton;
-import net.minecraft.world.entity.monster.Slime;
+import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 
-public class SlimeProjectileEntity extends ThrowableItemProjectile {
-    public SlimeProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
+public class WitherMasterBallProjectileEntity extends ThrowableItemProjectile {
+    public WitherMasterBallProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
-    public SlimeProjectileEntity(Level pLevel) {
+    public WitherMasterBallProjectileEntity(Level pLevel) {
         super(ModEntities.POKEBALL_PROJECTILE.get(),pLevel);
     }
-    public SlimeProjectileEntity(LivingEntity livingEntity, Level pLevel) {
+    public WitherMasterBallProjectileEntity(LivingEntity livingEntity, Level pLevel) {
         super(ModEntities.POKEBALL_PROJECTILE.get(),livingEntity,pLevel);
     }
 
@@ -32,7 +27,7 @@ public class SlimeProjectileEntity extends ThrowableItemProjectile {
 
     @Override
     protected Item getDefaultItem() {
-        return ModItems.SlimePokeball.get();
+        return ModItems.WitherMasterball.get();
     }
 
 
@@ -43,7 +38,7 @@ public class SlimeProjectileEntity extends ThrowableItemProjectile {
         if (!this.level().isClientSide) {
             this.level().broadcastEntityEvent(this, (byte)3);
             BlockPos blockPos = BlockPos.containing(pResult.getLocation());
-            Slime skeleton= new Slime(EntityType.SLIME,level());
+            WitherBoss skeleton= new WitherBoss(EntityType.WITHER,level());
             skeleton.setPos(pResult.getLocation());
 
 

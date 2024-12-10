@@ -36,7 +36,6 @@ public class WhiteFoliagePlacer extends FoliagePlacer {
 
         BlockPos blockpos = pAttachment.pos();
         blockpos.north(3).east(3);        // -3 z      // +3 x
-        System.out.println(blockpos.getX()+ "     "+blockpos.getY()+"     " + blockpos.getZ());
         int i = 0;
 
         for (int j = blockpos.getY() - pFoliageHeight + pOffset; j <= blockpos.getY() + pOffset; j++) {

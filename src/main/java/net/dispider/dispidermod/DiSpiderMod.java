@@ -7,19 +7,21 @@ import net.dispider.dispidermod.component.ModDataComponents;
 import net.dispider.dispidermod.effect.ModEffects;
 import net.dispider.dispidermod.enchantment.ModEnchantmentEffects;
 import net.dispider.dispidermod.entity.ModEntities;
+import net.dispider.dispidermod.entity.client.GronRenderer;
+import net.dispider.dispidermod.entity.custom.mob.GronEntity;
 import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.potion.ModPotions;
 import net.dispider.dispidermod.screen.ModMenuTypes;
 import net.dispider.dispidermod.screen.MoneyPrinterScreen;
 import net.dispider.dispidermod.sound.ModSounds;
 import net.dispider.dispidermod.util.ModItemProperties;
-import net.dispider.dispidermod.util.ModTags;
+import net.dispider.dispidermod.worldgen.biome.ModTerrablender;
+import net.dispider.dispidermod.worldgen.biome.surface.ModSurfaceRules;
 import net.dispider.dispidermod.worldgen.tree.ModFoliagePlacer;
 import net.dispider.dispidermod.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,8 +36,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DiSpiderMod.EXAMPLEMOD)
@@ -64,6 +65,7 @@ public class DiSpiderMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModTerrablender.registerBiomes();
         ModDataComponents.register(modEventBus);
 
 
@@ -85,6 +87,8 @@ public class DiSpiderMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD,EXAMPLEMOD,ModSurfaceRules.makeRules());
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD,EXAMPLEMOD, ModSurfaceRules.makeRulesRed());
 
     }
 
@@ -175,6 +179,7 @@ public class DiSpiderMod
             EntityRenderers.register(ModEntities.Masterball_PROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.EnderDragonPROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.WitherPROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.GRON.get(), GronRenderer::new);
             MenuScreens.register(ModMenuTypes.MONEY_PRINTER_MENU.get(), MoneyPrinterScreen::new);
 
         }

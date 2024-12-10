@@ -1,11 +1,12 @@
-// 1.21	2024-12-06T14:47:50.8613155	Tags for minecraft:block mod id dispider_mod
+// 1.21	2024-12-09T20:13:39.8033851	Tags for minecraft:block mod id dispider_mod
 73c8d134cc5c183b62a14753083616851d4c1e28 data/dispider_mod/tags/block/incorrect_for_emerald_tool.json
 1f8eebbd5ff6b024f8f558d170d7477140469346 data/dispider_mod/tags/block/needs_emerald_tool.json
+88a6ac070eb80ff4bf3fdb9ed65f8fa233446cc3 data/minecraft/tags/block/dirt.json
 3113fdbcf1c7f31907e7c219f6a703cd196014b1 data/minecraft/tags/block/fences.json
 23e533cb84fbf1bcfab026bcfef7de28b392767d data/minecraft/tags/block/fence_gates.json
-b06494b93bfa595aa130698523eecce5906d5a26 data/minecraft/tags/block/logs_that_burn.json
-c7cc7c20148c0204a9771532c7f1684c40ea7032 data/minecraft/tags/block/mineable/pickaxe.json
+ee3091a9427a8dc7701a8e8b13c14f90274b13a6 data/minecraft/tags/block/logs_that_burn.json
+f73e49de0424582fb488d26d6fdd55f7ab427c52 data/minecraft/tags/block/mineable/pickaxe.json
 7c15618f4d5a5507738ecb18bc5d550a31a43160 data/minecraft/tags/block/needs_diamond_tool.json
 d76b0134f8ef0d384514a50d99f74ed130f541e4 data/minecraft/tags/block/needs_iron_tool.json
-ace4d6fc0dd005a158fbc6191a61b4c77968e677 data/minecraft/tags/block/planks.json
+c5c64c51da7da45d5070475623e1ce59e3aac5c9 data/minecraft/tags/block/planks.json
 22763c7ad789f932890b804b4a626bf8c23fa8f2 data/minecraft/tags/block/walls.json

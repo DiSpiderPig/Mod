@@ -1,7 +1,6 @@
 package net.dispider.dispidermod.item.custom.pokeball;
 
-import net.dispider.dispidermod.entity.custom.MasterBallProjectileEntity;
-import net.dispider.dispidermod.entity.custom.PokeballProjectileEntity;
+import net.dispider.dispidermod.entity.custom.projectile.PokeballProjectileEntity;
 import net.dispider.dispidermod.sound.ModSounds;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;

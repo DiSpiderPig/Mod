@@ -1,21 +1,16 @@
-package net.dispider.dispidermod.entity.custom;
+package net.dispider.dispidermod.entity.custom.projectile;
 
 import net.dispider.dispidermod.entity.ModEntities;
 import net.dispider.dispidermod.item.ModItems;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.boss.EnderDragonPart;
-import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
-import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.phys.HitResult;
-
-import java.util.List;
 
 public class MasterBallProjectileEntity extends ThrowableItemProjectile {
     public MasterBallProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {

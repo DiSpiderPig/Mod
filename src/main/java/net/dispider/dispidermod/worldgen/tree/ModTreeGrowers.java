@@ -11,4 +11,7 @@ public class ModTreeGrowers {
             Optional.empty(), Optional.of(ModConfiguredFeatures.BLUE_KEY), Optional.empty());
     public static final TreeGrower WHITE = new TreeGrower(DiSpiderMod.EXAMPLEMOD + ":white",
             Optional.empty(), Optional.of(ModConfiguredFeatures.WHITE_KEY), Optional.empty());
+
+    public static final TreeGrower RED = new TreeGrower(DiSpiderMod.EXAMPLEMOD + ":red",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.WHITE_KEY), Optional.empty());
 }

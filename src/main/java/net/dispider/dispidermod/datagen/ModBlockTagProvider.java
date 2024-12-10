@@ -27,7 +27,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.END_RAINBOW_ORE.get())
                 .add(ModBlocks.NETHER_RAINBOW_ORE.get())
                 .add(ModBlocks.RAINBOW_DEEPSLATE_ORE.get())
-                .add(ModBlocks.MOKIP.get());
+                .add(ModBlocks.MOKIP.get())
+                        .add(ModBlocks.POKEBLOCK.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RAINBOW_BLOCK.get())
@@ -35,6 +36,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         .add(ModBlocks.RAINBOW_DEEPSLATE_ORE.get())
                                 .add(ModBlocks.END_RAINBOW_ORE.get())
                                         .add(ModBlocks.NETHER_RAINBOW_ORE.get());
+        tag(BlockTags.DIRT).add(ModBlocks.WHITE_GRASS.get()).add(ModBlocks.RED_GRASS.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.MOKIP.get());
@@ -47,11 +49,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         .add(ModBlocks.STRIPPED_BLUE_WOOD.get())
                         .add(ModBlocks.BLUE_WOOD.get())
                         .add(ModBlocks.STRIPPED_BLUE_LOG.get())
+                .add(ModBlocks.RED_LOG.get())
+                .add(ModBlocks.STRIPPED_RED_WOOD.get())
+                .add(ModBlocks.RED_WOOD.get())
+                .add(ModBlocks.STRIPPED_RED_LOG.get())
                 .add(ModBlocks.WHITE_WOOD.get())
                 .add(ModBlocks.STRIPPED_WHITE_WOOD.get())
                 .add(ModBlocks.WHITE_LOG.get())
                 .add(ModBlocks.STRIPPED_WHITE_LOG.get());
-        tag(BlockTags.PLANKS).add(ModBlocks.BLUE_PLANK.get()).add(ModBlocks.WHITE_PLANK.get());
+        tag(BlockTags.PLANKS).add(ModBlocks.BLUE_PLANK.get()).add(ModBlocks.WHITE_PLANK.get()).add(ModBlocks.WHITE_PLANK.get());
         tag(ModTags.Blocks.NEEDS_EMERALD_TOOL)
                 .add(ModBlocks.RAINBOW_ORE.get())
                 .add(ModBlocks.END_RAINBOW_ORE.get())

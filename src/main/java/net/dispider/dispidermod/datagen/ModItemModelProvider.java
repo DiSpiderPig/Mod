@@ -74,6 +74,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.BlUE_FENCE,ModBlocks.BLUE_PLANK);
         wallItem(ModBlocks.BlUE_WALL,ModBlocks.BLUE_PLANK);
 
+        buttonItem(ModBlocks.RED_BUTTON,ModBlocks.RED_PLANK);
+        fenceItem(ModBlocks.RED_FENCE,ModBlocks.RED_PLANK);
+        wallItem(ModBlocks.RED_WALL,ModBlocks.RED_PLANK);
+
+        buttonItem(ModBlocks.WHITE_BUTTON,ModBlocks.WHITE_PLANK);
+        fenceItem(ModBlocks.WHITE_FENCE,ModBlocks.WHITE_PLANK);
+        wallItem(ModBlocks.WHITE_WALL,ModBlocks.WHITE_PLANK);
+
         handheldItem(ModItems.EMERALD_AXE);
         handheldItem(ModItems.EMERALD_SHOVEL);
         handheldItem(ModItems.RedKatana);
@@ -88,6 +96,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.RAINBOW_HAMMER);
 
         simpleBlockItem(ModBlocks.BlUE_DOOR);
+        simpleBlockItem(ModBlocks.RED_DOOR);
+        simpleBlockItem(ModBlocks.WHITE_DOOR);
+
+
 
         trimmedArmorItem(ModItems.EMERALD_HELMET);
         trimmedArmorItem(ModItems.EMERALD_CHESTPLATE);
@@ -95,6 +107,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.EMERALD_BOOTS);
         saplingItem(ModBlocks.BLUE_SAPLING);
         saplingItem(ModBlocks.WHITE_SAPLING);
+        saplingItem(ModBlocks.RED_SAPLING);
 
 
 

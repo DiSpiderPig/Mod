@@ -1,7 +1,6 @@
 package net.dispider.dispidermod.item.custom.pokeball;
 
-import net.dispider.dispidermod.entity.custom.CreeperProjectileEntity;
-import net.dispider.dispidermod.entity.custom.ZombieProjectileEntity;
+import net.dispider.dispidermod.entity.custom.projectile.ZombieProjectileEntity;
 import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.sound.ModSounds;
 import net.minecraft.network.chat.Component;

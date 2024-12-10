@@ -1,6 +1,6 @@
 package net.dispider.dispidermod.item.custom.pokeball;
 
-import net.dispider.dispidermod.entity.custom.SkeletonPokeballProjectileEntity;
+import net.dispider.dispidermod.entity.custom.projectile.SkeletonPokeballProjectileEntity;
 import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.sound.ModSounds;
 import net.minecraft.network.chat.Component;

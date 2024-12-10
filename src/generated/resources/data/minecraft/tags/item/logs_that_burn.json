@@ -7,6 +7,10 @@
     "dispider_mod:white_log",
     "dispider_mod:stripped_white_log",
     "dispider_mod:stripped_white_wood",
-    "dispider_mod:white_wood"
+    "dispider_mod:white_wood",
+    "dispider_mod:red_log",
+    "dispider_mod:stripped_red_log",
+    "dispider_mod:stripped_red_wood",
+    "dispider_mod:red_wood"
   ]
 }

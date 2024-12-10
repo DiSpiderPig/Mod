@@ -102,6 +102,14 @@ public class ModRecipeProvider extends RecipeProvider {
                         .requires(ModBlocks.WHITE_LOG.get())
                                 .unlockedBy(getHasName(ModBlocks.WHITE_LOG.get()),has(ModBlocks.WHITE_LOG.get())).save(pRecipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,ModBlocks.RED_PLANK.get(),4)
+                .requires(ModBlocks.RED_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.RED_LOG.get()),has(ModBlocks.RED_LOG.get())).save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,ModBlocks.BLUE_PLANK.get(),4)
+                .requires(ModBlocks.BLUE_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.BLUE_LOG.get()),has(ModBlocks.BLUE_LOG.get())).save(pRecipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.Spanakoruzi.get(),1)
                 .requires(Items.ROTTEN_FLESH.asItem())
                 .requires(Items.BOWL.asItem())
@@ -153,6 +161,51 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModBlocks.BLUE_PLANK.get()), has(ModBlocks.BLUE_PLANK.get())).save(pRecipeOutput);
         trapdoorBuilder(ModBlocks.BlUE_TRAP_DOOR.get(), Ingredient.of(ModBlocks.BlUE_TRAP_DOOR.get())).group("blue")
                 .unlockedBy(getHasName(ModBlocks.BLUE_PLANK.get()), has(ModBlocks.BLUE_PLANK.get())).save(pRecipeOutput);
+
+
+
+
+        stairBuilder(ModBlocks.WHITE_STAIRS.get(),Ingredient.of(ModBlocks.WHITE_PLANK.get())).group("white")
+                .unlockedBy(getHasName(ModBlocks.WHITE_PLANK.get()),has(ModBlocks.WHITE_PLANK.get())).save(pRecipeOutput);
+        slab(pRecipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.WHITE_SLAB.get(),ModBlocks.WHITE_PLANK.get());
+
+        buttonBuilder(ModBlocks.WHITE_BUTTON.get(), Ingredient.of(ModBlocks.WHITE_BUTTON.get())).group("white")
+                .unlockedBy(getHasName(ModBlocks.WHITE_PLANK.get()), has(ModBlocks.WHITE_PLANK.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.WHITE_PRESSURE_PLATE.get(), ModBlocks.WHITE_PLANK.get());
+
+        fenceBuilder(ModBlocks.WHITE_FENCE.get(), Ingredient.of(ModBlocks.WHITE_PLANK.get())).group("white")
+                .unlockedBy(getHasName(ModBlocks.WHITE_PLANK.get()), has(ModBlocks.WHITE_PLANK.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.WHITE_FENCE_GATE.get(), Ingredient.of(ModBlocks.WHITE_PLANK.get())).group("white")
+                .unlockedBy(getHasName(ModBlocks.WHITE_PLANK.get()), has(ModBlocks.WHITE_PLANK.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_WALL.get(), ModBlocks.WHITE_PLANK.get());
+
+        doorBuilder(ModBlocks.WHITE_DOOR.get(), Ingredient.of(ModBlocks.WHITE_PLANK.get())).group("white")
+                .unlockedBy(getHasName(ModBlocks.WHITE_PLANK.get()), has(ModBlocks.WHITE_PLANK.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.WHITE_TRAP_DOOR.get(), Ingredient.of(ModBlocks.WHITE_TRAP_DOOR.get())).group("white")
+                .unlockedBy(getHasName(ModBlocks.WHITE_PLANK.get()), has(ModBlocks.WHITE_PLANK.get())).save(pRecipeOutput);
+
+
+
+
+
+        stairBuilder(ModBlocks.RED_STAIRS.get(),Ingredient.of(ModBlocks.RED_PLANK.get())).group("red")
+                .unlockedBy(getHasName(ModBlocks.RED_PLANK.get()),has(ModBlocks.RED_PLANK.get())).save(pRecipeOutput);
+        slab(pRecipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.RED_SLAB.get(),ModBlocks.RED_PLANK.get());
+
+        buttonBuilder(ModBlocks.RED_BUTTON.get(), Ingredient.of(ModBlocks.RED_BUTTON.get())).group("red")
+                .unlockedBy(getHasName(ModBlocks.RED_PLANK.get()), has(ModBlocks.RED_PLANK.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.RED_PRESSURE_PLATE.get(), ModBlocks.RED_PLANK.get());
+
+        fenceBuilder(ModBlocks.RED_FENCE.get(), Ingredient.of(ModBlocks.RED_PLANK.get())).group("red")
+                .unlockedBy(getHasName(ModBlocks.RED_PLANK.get()), has(ModBlocks.RED_PLANK.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.RED_FENCE_GATE.get(), Ingredient.of(ModBlocks.RED_PLANK.get())).group("red")
+                .unlockedBy(getHasName(ModBlocks.BLUE_PLANK.get()), has(ModBlocks.RED_PLANK.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_WALL.get(), ModBlocks.RED_PLANK.get());
+
+        doorBuilder(ModBlocks.RED_DOOR.get(), Ingredient.of(ModBlocks.RED_PLANK.get())).group("red")
+                .unlockedBy(getHasName(ModBlocks.RED_PLANK.get()), has(ModBlocks.BLUE_PLANK.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.RED_TRAP_DOOR.get(), Ingredient.of(ModBlocks.RED_TRAP_DOOR.get())).group("red")
+                .unlockedBy(getHasName(ModBlocks.RED_PLANK.get()), has(ModBlocks.RED_PLANK.get())).save(pRecipeOutput);
 
         trimSmithing(pRecipeOutput,ModItems.PEACE_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD
         ,"peace"));

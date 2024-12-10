@@ -1,6 +1,8 @@
 package net.dispider.dispidermod.event;
 
 import net.dispider.dispidermod.DiSpiderMod;
+import net.dispider.dispidermod.entity.ModEntities;
+import net.dispider.dispidermod.entity.custom.mob.GronEntity;
 import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.item.custom.HammerItem;
 import net.dispider.dispidermod.potion.ModPotions;
@@ -24,6 +26,7 @@ import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -81,5 +84,11 @@ public class ModEvents {
     PotionBrewing.Builder builder = event.getBuilder();
     builder.addMix(Potions.AWKWARD, ModItems.VAPE.get(), ModPotions.CANCER_POTION.getHolder().get());
     }
+    @SubscribeEvent
+    public static void registerAttributes(EntityAttributeCreationEvent event){
+        event.put(ModEntities.GRON.get(), GronEntity.createAttributes().build());
+    }
+
+
 
 }

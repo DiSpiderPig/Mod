@@ -45,11 +45,16 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.WHITE_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_WHITE_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_WHITE_WOOD.get().asItem())
-                .add(ModBlocks.WHITE_WOOD.get().asItem());
+                .add(ModBlocks.WHITE_WOOD.get().asItem()).
+        add(ModBlocks.RED_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_RED_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_RED_WOOD.get().asItem())
+                .add(ModBlocks.RED_WOOD.get().asItem());
 
         tag(ItemTags.PLANKS)
                 .add(ModBlocks.BLUE_PLANK.get().asItem())
-                .add(ModBlocks.WHITE_PLANK.get().asItem());
+                .add(ModBlocks.WHITE_PLANK.get().asItem()).
+                add(ModBlocks.RED_PLANK.get().asItem());
 
     }
 }

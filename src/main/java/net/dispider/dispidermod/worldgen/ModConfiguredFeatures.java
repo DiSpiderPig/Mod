@@ -17,9 +17,10 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaPineFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.*;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.CherryTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.MegaJungleTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
@@ -37,6 +38,7 @@ public class ModConfiguredFeatures {
 
     public static  final  ResourceKey<ConfiguredFeature<?,?>> BLUE_KEY = registerKey("blue");
     public static final ResourceKey<ConfiguredFeature<?,?>> WHITE_KEY = registerKey("white");
+    public static final ResourceKey<ConfiguredFeature<?,?>> RED_KEY = registerKey("red");
 
     // CF - > PF - > BM
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -54,7 +56,7 @@ public class ModConfiguredFeatures {
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
-        register(context, WHITE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+         register(context, WHITE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.WHITE_LOG.get()),
                 new WhiteTrunkPlacer(12, 12, 10),
 
@@ -62,6 +64,17 @@ public class ModConfiguredFeatures {
                 new WhiteFoliagePlacer(ConstantInt.of(7), ConstantInt.of(2),8),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, RED_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.RED_LOG.get()),
+                new BendingTrunkPlacer(4, 4, 3,4,ConstantInt.of(4)),
+
+                BlockStateProvider.simple(ModBlocks.RED_LEAVES.get()),
+                new FancyFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3),
+
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+
 
         List<OreConfiguration.TargetBlockState> overworldRainbowOres = List.of(
                 OreConfiguration.target(stoneReplaceables, ModBlocks.RAINBOW_ORE.get().defaultBlockState()),

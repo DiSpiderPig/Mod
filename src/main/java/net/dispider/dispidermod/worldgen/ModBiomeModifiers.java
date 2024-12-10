@@ -21,6 +21,7 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_TREE_BLUE = registerKey("add_tree_blue");
     public static final ResourceKey<BiomeModifier> ADD_TREE_WHITE = registerKey("add_tree_white");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_RED = registerKey("add_tree_red");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
@@ -40,6 +41,9 @@ context.register(ADD_RAINBOW_ORE,new ForgeBiomeModifiers.AddFeaturesBiomeModifie
 
         context.register(ADD_TREE_WHITE,new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomes.getOrThrow(Tags.Biomes.IS_MOUNTAIN),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.WHITE_PLACED_KEY)),GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_RED,new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.RED_PLACED_KEY)),GenerationStep.Decoration.VEGETAL_DECORATION));
 
 
 

@@ -25,6 +25,7 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> BLUE_PLACED_KEY = registerKey("blue_placed");
     public static final ResourceKey<PlacedFeature> WHITE_PLACED_KEY = registerKey("white_placed");
+    public static final ResourceKey<PlacedFeature> RED_PLACED_KEY = registerKey("red_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -38,6 +39,9 @@ public class ModPlacedFeatures {
 
        register(context,BLUE_PLACED_KEY,configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUE_KEY), VegetationPlacements.treePlacement(PlacementUtils.countExtra(
                3,0.1f,2), ModBlocks.BLUE_SAPLING.get()));
+
+        register(context,RED_PLACED_KEY,configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_KEY), VegetationPlacements.treePlacement(PlacementUtils.countExtra(
+                3,0.1f,2), ModBlocks.RED_SAPLING.get()));
 
         register(context,WHITE_PLACED_KEY,configuredFeatures.getOrThrow(ModConfiguredFeatures.WHITE_KEY), VegetationPlacements.treePlacement(PlacementUtils.countExtra(
                 1,0.01f,1), ModBlocks.WHITE_SAPLING.get()));

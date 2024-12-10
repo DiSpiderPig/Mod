@@ -1,4 +1,4 @@
-package net.dispider.dispidermod.entity.custom;
+package net.dispider.dispidermod.entity.custom.projectile;
 
 import net.dispider.dispidermod.entity.ModEntities;
 import net.dispider.dispidermod.item.ModItems;

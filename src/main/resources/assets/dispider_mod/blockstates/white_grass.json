@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "dispider_mod:block/white_grass_snow"
+      },
+      {
+        "model": "dispider_mod:block/white_grass_snow",
+        "y": 90
+      },
+      {
+        "model": "dispider_mod:block/white_grass_snow",
+        "y": 180
+      },
+      {
+        "model": "dispider_mod:block/white_grass_snow",
+        "y": 270
+      }
+    ],
+    "snowy=true": {
+      "model": "dispider_mod:block/white_grass_snow"
+    }
+  }
+}

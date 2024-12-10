@@ -30,11 +30,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockwithItem(ModBlocks.RAINBOW_BLOCK);
         blockwithItem(ModBlocks.BLUE_PLANK);
         blockwithItem(ModBlocks.WHITE_PLANK);
+        blockwithItem(ModBlocks.RED_PLANK);
         blockwithItem(ModBlocks.MOKIP);
         blockwithItem(ModBlocks.RAINBOW_ORE);
         blockwithItem(ModBlocks.END_RAINBOW_ORE);
         blockwithItem(ModBlocks.NETHER_RAINBOW_ORE);
         blockwithItem(ModBlocks.RAINBOW_DEEPSLATE_ORE);
+        blockwithItem(ModBlocks.MOD_PORTAL);
+        blockwithItem(ModBlocks.POKEBLOCK);
+
 
 
         stairsBlock(ModBlocks.BlUE_STAIRS.get(),blockTexture(ModBlocks.BLUE_PLANK.get()));
@@ -48,9 +52,36 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(ModBlocks.BlUE_FENCE_GATE.get(),blockTexture(ModBlocks.BLUE_PLANK.get()));
         wallBlock(ModBlocks.BlUE_WALL.get(),blockTexture(ModBlocks.BLUE_PLANK.get()));
 
+        stairsBlock(ModBlocks.WHITE_STAIRS.get(),blockTexture(ModBlocks.WHITE_PLANK.get()));
+        slabBlock(ModBlocks.WHITE_SLAB.get(),blockTexture(ModBlocks.WHITE_PLANK.get()),blockTexture(ModBlocks.WHITE_PLANK.get()));
+
+        buttonBlock(ModBlocks.WHITE_BUTTON.get(),blockTexture(ModBlocks.WHITE_PLANK.get()));
+        pressurePlateBlock(ModBlocks.WHITE_PRESSURE_PLATE.get(),blockTexture(ModBlocks.WHITE_PLANK.get()));
+
+        fenceBlock(ModBlocks.WHITE_FENCE.get(),blockTexture(ModBlocks.WHITE_PLANK.get()));
+        fenceGateBlock(ModBlocks.WHITE_FENCE_GATE.get(),blockTexture(ModBlocks.WHITE_PLANK.get()));
+        wallBlock(ModBlocks.WHITE_WALL.get(),blockTexture(ModBlocks.WHITE_PLANK.get()));
+
+        stairsBlock(ModBlocks.RED_STAIRS.get(),blockTexture(ModBlocks.RED_PLANK.get()));
+        slabBlock(ModBlocks.RED_SLAB.get(),blockTexture(ModBlocks.RED_PLANK.get()),blockTexture(ModBlocks.RED_PLANK.get()));
+
+        buttonBlock(ModBlocks.RED_BUTTON.get(),blockTexture(ModBlocks.BLUE_PLANK.get()));
+        pressurePlateBlock(ModBlocks.RED_PRESSURE_PLATE.get(),blockTexture(ModBlocks.RED_PLANK.get()));
+
+
+        fenceBlock(ModBlocks.RED_FENCE.get(),blockTexture(ModBlocks.RED_PLANK.get()));
+        fenceGateBlock(ModBlocks.RED_FENCE_GATE.get(),blockTexture(ModBlocks.RED_PLANK.get()));
+        wallBlock(ModBlocks.RED_WALL.get(),blockTexture(ModBlocks.RED_PLANK.get()));
+
 
         doorBlockWithRenderType(ModBlocks.BlUE_DOOR.get(),modLoc("block/blue_door_bottom"),modLoc("block/blue_door_top"),"cutout");
         trapdoorBlockWithRenderType(ModBlocks.BlUE_TRAP_DOOR.get(),modLoc("block/blue_trap_door"),true,"cutout");
+
+        doorBlockWithRenderType(ModBlocks.WHITE_DOOR.get(),modLoc("block/white_door_bottom"),modLoc("block/white_door_top"),"cutout");
+        trapdoorBlockWithRenderType(ModBlocks.WHITE_TRAP_DOOR.get(),modLoc("block/white_trap_door"),true,"cutout");
+
+        doorBlockWithRenderType(ModBlocks.RED_DOOR.get(),modLoc("block/red_door_bottom"),modLoc("block/red_door_top"),"cutout");
+        trapdoorBlockWithRenderType(ModBlocks.RED_TRAP_DOOR.get(),modLoc("block/red_trap_door"),true,"cutout");
 
          simpleBlock(ModBlocks.MONEY_PRINTER.get(), new ModelFile.UncheckedModelFile(modLoc("block/money_printer")) {
          });
@@ -61,15 +92,34 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.BlUE_FENCE_GATE);
         blockItem(ModBlocks.BlUE_TRAP_DOOR,"_bottom");
 
+        blockItem(ModBlocks.WHITE_PRESSURE_PLATE);
+        blockItem(ModBlocks.WHITE_SLAB);
+        blockItem(ModBlocks.WHITE_STAIRS);
+        blockItem(ModBlocks.WHITE_FENCE_GATE);
+        blockItem(ModBlocks.WHITE_TRAP_DOOR,"_bottom");
+
+        blockItem(ModBlocks.RED_PRESSURE_PLATE);
+        blockItem(ModBlocks.RED_SLAB);
+        blockItem(ModBlocks.RED_STAIRS);
+        blockItem(ModBlocks.RED_FENCE_GATE);
+        blockItem(ModBlocks.RED_TRAP_DOOR,"_bottom");
+
 
         logBlock(ModBlocks.BLUE_LOG.get());
         axisBlock(ModBlocks.BLUE_WOOD.get(),blockTexture(ModBlocks.BLUE_LOG.get()),blockTexture(ModBlocks.BLUE_LOG.get())) ;
         logBlock(ModBlocks.STRIPPED_BLUE_LOG.get());
         axisBlock(ModBlocks.STRIPPED_BLUE_WOOD.get(),blockTexture(ModBlocks.STRIPPED_BLUE_LOG.get()),blockTexture(ModBlocks.BLUE_LOG.get())) ;
+
+
         logBlock(ModBlocks.WHITE_LOG.get());
         axisBlock(ModBlocks.WHITE_WOOD.get(),blockTexture(ModBlocks.WHITE_LOG.get()),blockTexture(ModBlocks.WHITE_LOG.get()));
         logBlock(ModBlocks.STRIPPED_WHITE_LOG.get());
         axisBlock(ModBlocks.STRIPPED_WHITE_WOOD.get(),blockTexture(ModBlocks.STRIPPED_WHITE_LOG.get()),blockTexture(ModBlocks.WHITE_LOG.get())) ;
+
+        logBlock(ModBlocks.RED_LOG.get());
+        axisBlock(ModBlocks.RED_WOOD.get(),blockTexture(ModBlocks.RED_LOG.get()),blockTexture(ModBlocks.RED_LOG.get()));
+        logBlock(ModBlocks.STRIPPED_RED_LOG.get());
+        axisBlock(ModBlocks.STRIPPED_RED_WOOD.get(),blockTexture(ModBlocks.STRIPPED_RED_LOG.get()),blockTexture(ModBlocks.RED_LOG.get())) ;
 
 
 
@@ -83,13 +133,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_WHITE_LOG);
         blockItem(ModBlocks.STRIPPED_WHITE_WOOD);
 
+        blockItem(ModBlocks.RED_LOG);
+        blockItem(ModBlocks.RED_WOOD);
+        blockItem(ModBlocks.STRIPPED_RED_LOG);
+        blockItem(ModBlocks.STRIPPED_RED_WOOD);
+
 
 
         saplingBlock(ModBlocks.BLUE_SAPLING);
-        saplingBlock(ModBlocks.WHITE_SAPLING);
         leavesBlock(ModBlocks.BLUE_LEAVES);
+
+        saplingBlock(ModBlocks.WHITE_SAPLING);
         leavesBlock(ModBlocks.WHITE_LEAVES);
 
+        saplingBlock(ModBlocks.RED_SAPLING);
+        leavesBlock(ModBlocks.RED_LEAVES);
 
         customLamp();
         makeCrop((CropBlock) ModBlocks.TOMATO_CROP.get(),"tomato_crop_stage","tomato_crop_stage");

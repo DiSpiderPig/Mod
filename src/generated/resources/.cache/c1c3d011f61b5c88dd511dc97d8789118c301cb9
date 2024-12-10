@@ -1,8 +1,8 @@
-// 1.21	2024-12-07T10:11:20.989527	Tags for minecraft:item mod id dispider_mod
+// 1.21	2024-12-09T20:13:39.8315419	Tags for minecraft:item mod id dispider_mod
 3c9a570f95f411fbd899f82bdc4a4afbc08723f0 data/dispider_mod/tags/item/cool_items.json
 b1fede5739cd1314e601e757d9aebd44d95819bb data/minecraft/tags/item/enchantable/weapon.json
-45ea6014bcef1837aff8781cf99f0f2cefa96f54 data/minecraft/tags/item/logs_that_burn.json
-40c4c441bd140ce9d8537355d3d6e75c6d45f35b data/minecraft/tags/item/planks.json
+210f0bb3a28a3ec066583721c4f8efcb22fa81ff data/minecraft/tags/item/logs_that_burn.json
+4af93723dcc14ed0dd10ae7a37fc704dd76a59c5 data/minecraft/tags/item/planks.json
 2940b47e90ac3d6305d5fa6b8300747c113136b6 data/minecraft/tags/item/trimmable_armor.json
 4cc07cf7b860275a84f4a8bca7c13bf38bfaa11e data/minecraft/tags/item/trim_materials.json
 30d7485bb7701cd0a78b8cb8532c3c4de5d75431 data/minecraft/tags/item/trim_templates.json
