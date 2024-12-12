@@ -33,6 +33,6 @@ public class ModDataPackEntries extends DatapackBuiltinEntriesProvider {
 
 
     public ModDataPackEntries(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries,BUILDER, Set.of(DiSpiderMod.EXAMPLEMOD));
+        super(output, registries,BUILDER, Set.of(DiSpiderMod.MODID));
     }
 }

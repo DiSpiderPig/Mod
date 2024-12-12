@@ -22,11 +22,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
-import java.util.function.ToIntFunction;
 
 public class ModBlocks {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DiSpiderMod.EXAMPLEMOD);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DiSpiderMod.MODID);
 
     public static final RegistryObject<Block> RAINBOW_BLOCK = registerBlock("rainbow_block",()->new Block(BlockBehaviour.Properties.of
             ().strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));

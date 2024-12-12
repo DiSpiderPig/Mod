@@ -7,14 +7,9 @@ import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.item.custom.HammerItem;
 import net.dispider.dispidermod.potion.ModPotions;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageSources;
-import net.minecraft.world.damagesource.DamageType;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 
@@ -24,7 +19,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
@@ -35,7 +29,7 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.HashSet;
 import java.util.Set;
 
-@Mod.EventBusSubscriber(modid = DiSpiderMod.EXAMPLEMOD,bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = DiSpiderMod.MODID,bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
 
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
@@ -83,10 +77,6 @@ public class ModEvents {
     public static void onBrewingRecipeRegister(BrewingRecipeRegisterEvent event){
     PotionBrewing.Builder builder = event.getBuilder();
     builder.addMix(Potions.AWKWARD, ModItems.VAPE.get(), ModPotions.CANCER_POTION.getHolder().get());
-    }
-    @SubscribeEvent
-    public static void registerAttributes(EntityAttributeCreationEvent event){
-        event.put(ModEntities.GRON.get(), GronEntity.createAttributes().build());
     }
 
 

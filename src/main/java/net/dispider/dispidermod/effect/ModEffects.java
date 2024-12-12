@@ -1,13 +1,9 @@
 package net.dispider.dispidermod.effect;
 
 import net.dispider.dispidermod.DiSpiderMod;
-import net.minecraft.core.Holder;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,12 +14,12 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModEffects {
 
     public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS,
-            DiSpiderMod.EXAMPLEMOD);
+            DiSpiderMod.MODID);
 
     public static final RegistryObject<MobEffect> CANCER_EFFECT = MOB_EFFECTS.register("cancer",()->new CancerEffect(
             MobEffectCategory.HARMFUL,
             000000).addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(
-                    DiSpiderMod.EXAMPLEMOD,"cancer"),-0.25f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
+                    DiSpiderMod.MODID,"cancer"),-0.25f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
             ));
 
     public static final RegistryObject<MobEffect> SOUL_EFFECT = MOB_EFFECTS.register("soul",()-> new SoulEffect(MobEffectCategory.HARMFUL,81437));

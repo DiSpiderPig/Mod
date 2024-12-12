@@ -9,7 +9,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -22,7 +21,7 @@ import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, DiSpiderMod.EXAMPLEMOD, exFileHelper);
+        super(output, DiSpiderMod.MODID, exFileHelper);
     }
 
     @Override
@@ -168,14 +167,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         getVariantBuilder(ModBlocks.SMILEY_FACE_LAMP.get()).forAllStates(state -> {
             if(state.getValue(Smiley_Face_Lamp.CLICKED)) {
                 return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("smiley_face_lamp_on",
-                        ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, "block/" + "smiley_face_lamp_on")))};
+                        ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "block/" + "smiley_face_lamp_on")))};
             } else {
                 return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("smiley_face_lamp_off",
-                        ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, "block/" + "smiley_face_lamp_off")))};
+                        ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "block/" + "smiley_face_lamp_off")))};
             }
         });
         simpleBlockItem(ModBlocks.SMILEY_FACE_LAMP.get(), models().cubeAll("smiley_face_lamp_on",
-                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, "block/" + "smiley_face_lamp_on")));
+                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "block/" + "smiley_face_lamp_on")));
     }
 
     public void makeCrop(CropBlock block, String modelName, String textureName) {
@@ -187,7 +186,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((TomatoCropBlock) block).getAgeProperty()),
-                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, "block/" + textureName + state.getValue(((TomatoCropBlock) block).getAgeProperty()))).renderType("cutout"));
+                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "block/" + textureName + state.getValue(((TomatoCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }

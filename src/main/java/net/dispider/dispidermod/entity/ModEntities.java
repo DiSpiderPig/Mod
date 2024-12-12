@@ -4,6 +4,7 @@ import net.dispider.dispidermod.DiSpiderMod;
 import net.dispider.dispidermod.entity.custom.mob.GronEntity;
 import net.dispider.dispidermod.entity.custom.projectile.MasterBallProjectileEntity;
 import net.dispider.dispidermod.entity.custom.projectile.PokeballProjectileEntity;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
@@ -14,7 +15,11 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class  ModEntities {
 
-    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, DiSpiderMod.EXAMPLEMOD);
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, DiSpiderMod.MODID);
+
+
+
+
     public static final RegistryObject<EntityType<PokeballProjectileEntity>> POKEBALL_PROJECTILE =
             ENTITY_TYPES.register("pokeball_projectile", () -> EntityType.Builder.<PokeballProjectileEntity>of(PokeballProjectileEntity::new, MobCategory.MISC)
                     .sized(0.5f, 0.5f).build("pokeball_projectile"));

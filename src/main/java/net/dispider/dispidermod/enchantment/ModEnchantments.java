@@ -15,7 +15,7 @@ import net.minecraft.world.item.enchantment.EnchantmentTarget;
 
 public class ModEnchantments {
     public static final ResourceKey<Enchantment> Lightning_Striker = ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.fromNamespaceAndPath(
-            DiSpiderMod.EXAMPLEMOD,"lightning_striker"));
+            DiSpiderMod.MODID,"lightning_striker"));
 
     public static void boostrap(BootstrapContext<Enchantment> context){
         var enchantments = context.lookup(Registries.ENCHANTMENT);

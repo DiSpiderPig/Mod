@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModMenuTypes {
 
-    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, DiSpiderMod.EXAMPLEMOD);
+    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, DiSpiderMod.MODID);
 
     public static  final RegistryObject<MenuType<MoneyPrinterMenu>> MONEY_PRINTER_MENU = registerMenuType("money_printer_menu",MoneyPrinterMenu::new);
 

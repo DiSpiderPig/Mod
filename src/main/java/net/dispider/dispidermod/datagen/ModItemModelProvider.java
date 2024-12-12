@@ -115,42 +115,42 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,
                         "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void fenceItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,
                         "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void wallItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,
                         "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<? extends Block> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"item/" + item.getId().getPath()));
+                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"item/" + item.getId().getPath()));
+                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"block/" + item.getId().getPath()));
+                ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"block/" + item.getId().getPath()));
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
-        final String MOD_ID = DiSpiderMod.EXAMPLEMOD; // Change this to your mod id
+        final String MOD_ID = DiSpiderMod.MODID; // Change this to your mod id
 
         if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {

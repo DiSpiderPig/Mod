@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class ModTrimMaterials {
     public static final ResourceKey<TrimMaterial> RAINBOW =
-            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, "rainbow"));
+            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "rainbow"));
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
         register(context, RAINBOW, ModItems.Rainbow.get(), Style.EMPTY.withColor(TextColor.parseColor("#031cfc").getOrThrow()), 1.0F);

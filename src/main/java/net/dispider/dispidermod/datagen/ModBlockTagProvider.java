@@ -6,7 +6,6 @@ import net.dispider.dispidermod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -16,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends BlockTagsProvider {
     public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, DiSpiderMod.EXAMPLEMOD, existingFileHelper);
+        super(output, lookupProvider, DiSpiderMod.MODID, existingFileHelper);
     }
 
     @Override

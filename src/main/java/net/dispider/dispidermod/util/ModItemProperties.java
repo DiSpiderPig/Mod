@@ -6,12 +6,11 @@ import net.dispider.dispidermod.item.ModItems;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 
 public class ModItemProperties {
 
     public static void addCustomProperties(){
-        ItemProperties.register(ModItems.Ruga.get(), ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"used"),
+        ItemProperties.register(ModItems.Ruga.get(), ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"used"),
                 (itemStack,clientLevel,livingEntity,i) -> itemStack.get(ModDataComponents.COORDINATES.get())!=
                 null ? 1:0f);
         CustomBow(ModItems.EPIC_BOW.get());

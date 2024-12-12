@@ -21,8 +21,12 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 public class GronEntity extends Animal {
-    public GronEntity(EntityType<?> pEntityType, Level pLevel) {
+    /*public GronEntity(EntityType<?> pEntityType, Level pLevel) {
         super((EntityType<? extends GronEntity>) pEntityType, pLevel);
+    }*/
+
+    public GronEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+        super(pEntityType, pLevel);
     }
 
     @Override
@@ -40,11 +44,11 @@ public class GronEntity extends Animal {
     }
 
     public static AttributeSupplier.Builder createAttributes(){
-        return Animal.createLivingAttributes().add(Attributes.MAX_HEALTH,(150D)).add(Attributes.MOVEMENT_SPEED,0.4f)
-                .add(Attributes.ARMOR_TOUGHNESS,0.01f)
-                .add(Attributes.FOLLOW_RANGE,240)
-                .add(Attributes.ATTACK_KNOCKBACK,1f)
-                .add(Attributes.ATTACK_DAMAGE,1f);
+        return Animal.createLivingAttributes().add(Attributes.MAX_HEALTH,(150D)).add(Attributes.MOVEMENT_SPEED,0.4D)
+                .add(Attributes.ARMOR_TOUGHNESS,0.01D)
+                .add(Attributes.FOLLOW_RANGE,240D)
+                .add(Attributes.ATTACK_KNOCKBACK,1D)
+                .add(Attributes.ATTACK_DAMAGE,1D);
     }
 
     @Override

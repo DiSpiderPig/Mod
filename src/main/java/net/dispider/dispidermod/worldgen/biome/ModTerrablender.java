@@ -6,6 +6,6 @@ import terrablender.api.Regions;
 
 public class ModTerrablender {
     public static void registerBiomes(){
-        Regions.register(new ModOverworldRegion(ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"overworld"),2));
+        Regions.register(new ModOverworldRegion(ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"overworld"),2));
     }
 }
