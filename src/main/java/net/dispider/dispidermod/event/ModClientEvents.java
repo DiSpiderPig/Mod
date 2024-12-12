@@ -10,7 +10,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = DiSpiderMod.EXAMPLEMOD,bus = Mod.EventBusSubscriber.Bus.FORGE,value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = DiSpiderMod.MODID,bus = Mod.EventBusSubscriber.Bus.FORGE,value = Dist.CLIENT)
 public class ModClientEvents {
     @SubscribeEvent
     public static void onComputerFovModifierEvent(ComputeFovModifierEvent event) {
@@ -27,8 +27,8 @@ public class ModClientEvents {
             event.setNewFovModifier(fovModifier);
         }
     }
-    @SubscribeEvent
+    /*@SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions.RegisterLayerDefinitions event){
-        event.registerLayerDefinition(ModModelLayers.GRON_LAYER, GronModel::createBodyLayer);
-    }
+        event.registerLayerDefinition(GronModel.LAYER_LOCATION, GronModel::createBodyLayer);
+    }*/
 }
