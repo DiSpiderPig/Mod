@@ -8,7 +8,6 @@ import net.dispider.dispidermod.effect.ModEffects;
 import net.dispider.dispidermod.enchantment.ModEnchantmentEffects;
 import net.dispider.dispidermod.entity.ModEntities;
 import net.dispider.dispidermod.entity.client.GronRenderer;
-import net.dispider.dispidermod.entity.custom.mob.GronEntity;
 import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.potion.ModPotions;
 import net.dispider.dispidermod.screen.ModMenuTypes;
@@ -39,12 +38,12 @@ import org.slf4j.Logger;
 import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(DiSpiderMod.EXAMPLEMOD)
+@Mod(DiSpiderMod.MODID)
 
 public class DiSpiderMod
 {
     // Define mod id in a common place for everything to reference
-    public static final String EXAMPLEMOD = "dispider_mod";
+    public static final String MODID = "dispider_mod";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
@@ -87,8 +86,8 @@ public class DiSpiderMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD,EXAMPLEMOD,ModSurfaceRules.makeRules());
-        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD,EXAMPLEMOD, ModSurfaceRules.makeRulesRed());
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MODID,ModSurfaceRules.makeRules());
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MODID, ModSurfaceRules.makeRulesRed());
 
     }
 
@@ -163,7 +162,7 @@ public class DiSpiderMod
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = EXAMPLEMOD, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
