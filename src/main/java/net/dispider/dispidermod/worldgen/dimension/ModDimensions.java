@@ -1,6 +1,5 @@
 package net.dispider.dispidermod.worldgen.dimension;
 
-import com.ibm.icu.impl.Pair;
 import net.dispider.dispidermod.DiSpiderMod;
 import net.dispider.dispidermod.worldgen.biome.ModBiomes;
 import net.minecraft.core.HolderGetter;
@@ -18,16 +17,15 @@ import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
 import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
 
-import java.util.List;
 import java.util.OptionalLong;
 
 public class ModDimensions {
     public static final ResourceKey<LevelStem> AETHER_KEY = ResourceKey.create(Registries.LEVEL_STEM,
-            ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, "aether"));
+            ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "aether"));
     public static final ResourceKey<Level> AETHER_LEVEL_KEY = ResourceKey.create(Registries.DIMENSION,
-            ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, "aether"));
+            ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "aether"));
     public static final ResourceKey<DimensionType> AETHER_DIM_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE,
-            ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, "aether"));
+            ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "aether"));
     public static void bootstrapType(BootstrapContext<DimensionType> context) {
         context.register(AETHER_DIM_TYPE, new DimensionType(
                 OptionalLong.of(12000), // fixedTime

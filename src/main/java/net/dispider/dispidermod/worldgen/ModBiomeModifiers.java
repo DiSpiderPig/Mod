@@ -50,7 +50,7 @@ context.register(ADD_RAINBOW_ORE,new ForgeBiomeModifiers.AddFeaturesBiomeModifie
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
-        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, name));
+        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, name));
     }
 
 }

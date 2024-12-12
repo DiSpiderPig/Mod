@@ -14,7 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModTrimPatterns {
     public static final ResourceKey<TrimPattern> KAUPEN = ResourceKey.create(Registries.TRIM_PATTERN,
-            ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, "peace"));
+            ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "peace"));
 
     public static void bootstrap(BootstrapContext<TrimPattern> context) {
         register(context, ModItems.PEACE_SMITHING_TEMPLATE.get(), KAUPEN);

@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModEnchantmentEffects {
     public static final DeferredRegister<MapCodec<? extends EnchantmentEntityEffect>> ENTITY_ENCHANTMENT_EFFECTS =
-            DeferredRegister.create(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, DiSpiderMod.EXAMPLEMOD);
+            DeferredRegister.create(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, DiSpiderMod.MODID);
 
     public static final RegistryObject<MapCodec<? extends EnchantmentEntityEffect>> LIGHTNING_STRIKER =
             ENTITY_ENCHANTMENT_EFFECTS.register("lightning_striker",()-> LightningStrikerEnchantmentEffect.CODEC);

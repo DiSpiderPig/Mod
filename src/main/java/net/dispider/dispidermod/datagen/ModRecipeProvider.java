@@ -7,7 +7,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -15,12 +14,9 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.item.crafting.BlastingRecipe;
-import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-
-import static net.minecraft.data.models.model.TextureMapping.pattern;
 
 public class ModRecipeProvider extends RecipeProvider {
     public ModRecipeProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pRegistries) {
@@ -118,7 +114,7 @@ public class ModRecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.Money.get(),16)
                 .requires(ModBlocks.RAINBOW_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAINBOW_BLOCK.get()),
-                        has(ModBlocks.RAINBOW_BLOCK.get())).save(pRecipeOutput, DiSpiderMod.EXAMPLEMOD+":money_from_rainbow_block");
+                        has(ModBlocks.RAINBOW_BLOCK.get())).save(pRecipeOutput, DiSpiderMod.MODID +":money_from_rainbow_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.Soul2.get(),1)
                 .requires(ModItems.Soul.get(),2)
@@ -207,7 +203,7 @@ public class ModRecipeProvider extends RecipeProvider {
         trapdoorBuilder(ModBlocks.RED_TRAP_DOOR.get(), Ingredient.of(ModBlocks.RED_TRAP_DOOR.get())).group("red")
                 .unlockedBy(getHasName(ModBlocks.RED_PLANK.get()), has(ModBlocks.RED_PLANK.get())).save(pRecipeOutput);
 
-        trimSmithing(pRecipeOutput,ModItems.PEACE_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD
+        trimSmithing(pRecipeOutput,ModItems.PEACE_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID
         ,"peace"));
 
 
@@ -232,6 +228,6 @@ public class ModRecipeProvider extends RecipeProvider {
                                                                        List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
         for(ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(recipeOutput, DiSpiderMod.EXAMPLEMOD + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+                    .save(recipeOutput, DiSpiderMod.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
 }}

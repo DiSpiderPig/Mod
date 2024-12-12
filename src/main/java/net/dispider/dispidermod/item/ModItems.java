@@ -13,7 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
-   public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DiSpiderMod.EXAMPLEMOD);
+   public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DiSpiderMod.MODID);
 
    public static final RegistryObject<Item> Money = ITEMS.register("money",()->new Item((new Item.Properties())));
 
@@ -92,7 +92,7 @@ public class ModItems {
            .food(ModFoodProperties.VAPE)));
 
    public static final RegistryObject<Item> PEACE_SMITHING_TEMPLATE = ITEMS.register("peace_armor_trim_smithing_template",()-> SmithingTemplateItem.
-           createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"peace")));
+           createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"peace")));
 
 
    public static final RegistryObject<Item> EPIC_BOW = ITEMS.register("epic_bow",()->new ModBow(new Item.Properties().durability(500)));

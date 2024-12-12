@@ -16,8 +16,8 @@ import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
 public class ModBiomes {
-    public static final ResourceKey<Biome> WHITE_BIOME = ResourceKey.create(Registries.BIOME,ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"white_biome"));
-    public static final ResourceKey<Biome> RED_BIOME = ResourceKey.create(Registries.BIOME,ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"red_biome"));
+    public static final ResourceKey<Biome> WHITE_BIOME = ResourceKey.create(Registries.BIOME,ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"white_biome"));
+    public static final ResourceKey<Biome> RED_BIOME = ResourceKey.create(Registries.BIOME,ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"red_biome"));
 
     public static void bootstrap(BootstrapContext<Biome> context){
         context.register(WHITE_BIOME,testBiome(context));

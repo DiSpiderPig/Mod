@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
-            DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, DiSpiderMod.EXAMPLEMOD);
+            DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, DiSpiderMod.MODID);
 
     public static final RegistryObject<SoundEvent> EPIC_BOW_SHOOT = registerSoundEvent("chisel.use");
 
@@ -28,10 +28,10 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> KatanaSlash = registerSoundEvent("katanaslash");
     public static final RegistryObject<SoundEvent> KatanaBigSlash = registerSoundEvent("katanabigslash");
 
-    public static final ResourceKey<JukeboxSong> Moontale_Key = ResourceKey.create(Registries.JUKEBOX_SONG,ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"moontale"));
+    public static final ResourceKey<JukeboxSong> Moontale_Key = ResourceKey.create(Registries.JUKEBOX_SONG,ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"moontale"));
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name){
-        return SOUND_EVENTS.register(name,()->SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,name)));
+        return SOUND_EVENTS.register(name,()->SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,name)));
     }
 
     public static void register(IEventBus eventBus){

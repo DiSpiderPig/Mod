@@ -14,7 +14,7 @@ public class MoneyPrinterScreen extends AbstractContainerScreen<MoneyPrinterMenu
     private static final ResourceLocation TEXTURE;
 
     static {
-        TEXTURE = ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD, "textures/gui/money_printer_gui.png");
+        TEXTURE = ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "textures/gui/money_printer_gui.png");
     }
 
     public MoneyPrinterScreen(MoneyPrinterMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
