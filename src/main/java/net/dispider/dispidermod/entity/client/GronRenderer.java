@@ -10,12 +10,12 @@ import net.minecraft.resources.ResourceLocation;
 
 public class GronRenderer extends MobRenderer<GronEntity,GronModel<GronEntity>> {
     public GronRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new GronModel<>(pContext.bakeLayer(ModModelLayers.GRON_LAYER)), 2f);
+        super(pContext, new GronModel<>(pContext.bakeLayer(GronModel.LAYER_LOCATION)), 2f);
     }
 
     @Override
     public ResourceLocation getTextureLocation(GronEntity pEntity) {
-        return ResourceLocation.fromNamespaceAndPath(DiSpiderMod.EXAMPLEMOD,"textures/entity/gron.png");
+        return ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"textures/entity/gron.png");
 
 
     }
