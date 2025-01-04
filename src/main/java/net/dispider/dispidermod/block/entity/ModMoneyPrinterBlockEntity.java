@@ -109,20 +109,20 @@ public class ModMoneyPrinterBlockEntity extends BlockEntity implements MenuProvi
 
 
     @Override
-    protected void saveAdditional(CompoundTag pTag, HolderLookup.Provider pRegistries) {
-        pTag.put("inventory",itemHandler.serializeNBT(pRegistries));
-        pTag.putInt("money_printer_progress",progress);
-        super.saveAdditional(pTag, pRegistries);
+    public void saveAdditional(CompoundTag nbt, HolderLookup.Provider lookup) {
+        nbt.put("inventory", itemHandler.serializeNBT(lookup));
+        nbt.putInt("breeder.progress", this.progress);
+        super.saveAdditional(nbt, lookup);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag pTag, HolderLookup.Provider pRegistries) {
-        super.loadAdditional(pTag, pRegistries);
-       itemHandler.deserializeNBT(pRegistries,pTag.getCompound("inventory"));
-       progress = pTag.getInt("money_printer_progress");
+    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider lookup) {
+        super.loadAdditional(nbt, lookup);
+        itemHandler.deserializeNBT(lookup,nbt.getCompound("inventory"));
+        progress = nbt.getInt("breeder.progress");
+
 
     }
-
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
 
 

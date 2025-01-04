@@ -7,7 +7,6 @@ import net.dispider.dispidermod.component.ModDataComponents;
 import net.dispider.dispidermod.effect.ModEffects;
 import net.dispider.dispidermod.enchantment.ModEnchantmentEffects;
 import net.dispider.dispidermod.entity.ModEntities;
-import net.dispider.dispidermod.entity.client.GronRenderer;
 import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.potion.ModPotions;
 import net.dispider.dispidermod.screen.ModMenuTypes;
@@ -178,7 +177,6 @@ public class DiSpiderMod
             EntityRenderers.register(ModEntities.Masterball_PROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.EnderDragonPROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.WitherPROJECTILE.get(), ThrownItemRenderer::new);
-            EntityRenderers.register(ModEntities.GRON.get(), GronRenderer::new);
             MenuScreens.register(ModMenuTypes.MONEY_PRINTER_MENU.get(), MoneyPrinterScreen::new);
 
         }

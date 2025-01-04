@@ -1,6 +1,7 @@
 package net.dispider.dispidermod.worldgen.biome;
 
 import net.dispider.dispidermod.DiSpiderMod;
+import net.dispider.dispidermod.entity.ModEntities;
 import net.dispider.dispidermod.sound.ModSounds;
 import net.dispider.dispidermod.worldgen.ModPlacedFeatures;
 import net.minecraft.core.registries.Registries;
@@ -70,6 +71,7 @@ public class ModBiomes {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
+
 
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);

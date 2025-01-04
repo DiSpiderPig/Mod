@@ -138,6 +138,9 @@ dependencies {
     // compileOnly "mezz.jei:jei-${mc_version}-forge-api:${jei_version}"
     // runtimeOnly "mezz.jei:jei-${mc_version}-forge:${jei_version}"
 
+    // Apply Mixin AP
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
     // The group id is ignored when searching -- in this case, it is "blank"
@@ -197,6 +200,15 @@ publishing {
             url "file://${project.projectDir}/mcmodsrepo"
         }
     }
+}
+
+mixin {
+    // MixinGradle Settings
+    add sourceSets.main, 'mixins.mymod.refmap.json'
+    config 'mixins.mymod.json'
+
+    debug.verbose = true
+    debug.export = true
 }
 
 tasks.withType(JavaCompile).configureEach {

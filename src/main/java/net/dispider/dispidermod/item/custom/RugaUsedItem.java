@@ -1,7 +1,6 @@
 package net.dispider.dispidermod.item.custom;
 
 import net.dispider.dispidermod.component.ModDataComponents;
-import net.dispider.dispidermod.item.RugaUsed;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Position;

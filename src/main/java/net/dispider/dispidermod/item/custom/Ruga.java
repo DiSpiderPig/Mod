@@ -1,4 +1,4 @@
-package net.dispider.dispidermod;
+package net.dispider.dispidermod.item.custom;
 
 import java.util.Optional;
 import java.util.function.Function;

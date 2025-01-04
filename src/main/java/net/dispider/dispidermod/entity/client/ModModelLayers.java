@@ -17,4 +17,4 @@ public class ModModelLayers {
     private static ModelLayerLocation register(String name, String layerName) {
         return new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, name), layerName);
     }
- }
+}

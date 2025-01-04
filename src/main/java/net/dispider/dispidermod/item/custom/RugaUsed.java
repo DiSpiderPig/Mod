@@ -1,4 +1,4 @@
-package net.dispider.dispidermod.item;
+package net.dispider.dispidermod.item.custom;
 
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;

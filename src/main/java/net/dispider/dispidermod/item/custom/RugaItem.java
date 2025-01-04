@@ -1,10 +1,7 @@
 package net.dispider.dispidermod.item.custom;
 
-import net.dispider.dispidermod.Ruga;
 import net.dispider.dispidermod.component.ModDataComponents;
-import net.dispider.dispidermod.item.ModItems;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Position;
 import net.minecraft.network.chat.Component;
@@ -15,9 +12,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.behavior.LongJumpToRandomPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.windcharge.WindCharge;
@@ -26,15 +21,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileItem;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.DispenserBlock;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
-
-import static net.minecraft.world.entity.player.Player.*;
 
 public class RugaItem extends Item implements ProjectileItem {
     private static final int COOLDOWN = 100;
