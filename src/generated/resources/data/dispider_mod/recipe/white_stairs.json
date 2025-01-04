@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "white",
+  "key": {
+    "#": {
+      "item": "dispider_mod:white_plank"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "dispider_mod:white_stairs"
+  }
+}

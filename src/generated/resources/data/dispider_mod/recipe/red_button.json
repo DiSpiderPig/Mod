@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "red",
+  "ingredients": [
+    {
+      "item": "dispider_mod:red_button"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dispider_mod:red_button"
+  }
+}

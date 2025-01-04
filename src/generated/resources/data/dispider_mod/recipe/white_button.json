@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "white",
+  "ingredients": [
+    {
+      "item": "dispider_mod:white_button"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dispider_mod:white_button"
+  }
+}

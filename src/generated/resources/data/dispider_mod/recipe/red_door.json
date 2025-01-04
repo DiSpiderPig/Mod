@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "red",
+  "key": {
+    "#": {
+      "item": "dispider_mod:red_plank"
+    }
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "dispider_mod:red_door"
+  }
+}

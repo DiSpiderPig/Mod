@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "dispider_mod:white_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "dispider_mod:white_plank"
+  }
+}

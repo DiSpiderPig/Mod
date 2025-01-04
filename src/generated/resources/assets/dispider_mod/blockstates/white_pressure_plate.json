@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "dispider_mod:block/white_pressure_plate"
+    },
+    "powered=true": {
+      "model": "dispider_mod:block/white_pressure_plate_down"
+    }
+  }
+}

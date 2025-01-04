@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "dispider_mod:block/red_plank",
+    "side": "dispider_mod:block/red_plank",
+    "top": "dispider_mod:block/red_plank"
+  }
+}

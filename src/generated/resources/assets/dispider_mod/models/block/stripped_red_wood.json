@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "dispider_mod:block/red_log",
+    "side": "dispider_mod:block/stripped_red_log"
+  }
+}

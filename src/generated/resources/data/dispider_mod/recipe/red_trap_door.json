@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "red",
+  "key": {
+    "#": {
+      "item": "dispider_mod:red_trap_door"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "dispider_mod:red_trap_door"
+  }
+}

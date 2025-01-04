@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "red",
+  "key": {
+    "#": {
+      "item": "dispider_mod:red_plank"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "dispider_mod:red_stairs"
+  }
+}

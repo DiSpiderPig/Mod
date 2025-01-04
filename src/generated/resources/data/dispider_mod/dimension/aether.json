@@ -1,0 +1,11 @@
+{
+  "type": "dispider_mod:aether",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "dispider_mod:white_biome"
+    },
+    "settings": "minecraft:amplified"
+  }
+}

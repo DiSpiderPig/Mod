@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_plank": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dispider_mod:red_plank"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dispider_mod:red_fence_gate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blue_plank"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dispider_mod:red_fence_gate"
+    ]
+  }
+}
