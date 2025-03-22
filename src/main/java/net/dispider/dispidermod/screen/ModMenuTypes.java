@@ -14,9 +14,7 @@ public class ModMenuTypes {
 
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, DiSpiderMod.MODID);
 
-    public static  final RegistryObject<MenuType<MoneyPrinterMenu>> MONEY_PRINTER_MENU = registerMenuType("money_printer_menu",MoneyPrinterMenu::new);
-
-    private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory){
+     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory){
         return MENUS.register(name,()-> IForgeMenuType.create(factory));
     }
 

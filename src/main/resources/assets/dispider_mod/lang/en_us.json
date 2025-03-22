@@ -89,5 +89,6 @@
   "block.dispider_mod.blue_sapling": "Blue Sapling",
   "block.dispider_mod.white_sapling": "White Sapling",
   "block.dispider_mod.mod_portal": "????",
-  "block.dispider_mod.white_grass": "White Grass"
+  "block.dispider_mod.white_grass": "White Grass",
+  "entity.dispider_mod.man": "Man"
 }

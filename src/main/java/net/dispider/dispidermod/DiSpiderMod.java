@@ -7,10 +7,10 @@ import net.dispider.dispidermod.component.ModDataComponents;
 import net.dispider.dispidermod.effect.ModEffects;
 import net.dispider.dispidermod.enchantment.ModEnchantmentEffects;
 import net.dispider.dispidermod.entity.ModEntities;
+import net.dispider.dispidermod.entity.client.ManRenderer;
 import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.potion.ModPotions;
 import net.dispider.dispidermod.screen.ModMenuTypes;
-import net.dispider.dispidermod.screen.MoneyPrinterScreen;
 import net.dispider.dispidermod.sound.ModSounds;
 import net.dispider.dispidermod.util.ModItemProperties;
 import net.dispider.dispidermod.worldgen.biome.ModTerrablender;
@@ -177,7 +177,8 @@ public class DiSpiderMod
             EntityRenderers.register(ModEntities.Masterball_PROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.EnderDragonPROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.WitherPROJECTILE.get(), ThrownItemRenderer::new);
-            MenuScreens.register(ModMenuTypes.MONEY_PRINTER_MENU.get(), MoneyPrinterScreen::new);
+            EntityRenderers.register(ModEntities.MAN.get(), ManRenderer::new);
+
 
         }
     }

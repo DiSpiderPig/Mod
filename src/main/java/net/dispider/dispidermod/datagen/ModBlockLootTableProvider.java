@@ -39,8 +39,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
        dropSelf(ModBlocks.END_RAINBOW_ORE.get());
        dropSelf(ModBlocks.NETHER_RAINBOW_ORE.get());
        dropSelf(ModBlocks.RAINBOW_DEEPSLATE_ORE.get());
-       dropSelf(ModBlocks.MONEY_PRINTER.get());
-       dropSelf(ModBlocks.MOKIP.get());
+            dropSelf(ModBlocks.MOKIP.get());
 
 
 

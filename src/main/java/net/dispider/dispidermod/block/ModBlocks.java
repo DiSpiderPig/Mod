@@ -127,11 +127,7 @@ public class ModBlocks {
     public static final RegistryObject<SlabBlock> BlUE_SLAB = registerBlock("blue_slab",()->new SlabBlock(
             BlockBehaviour.Properties.of().strength(1f)));
 
-     public static final RegistryObject<Block> MONEY_PRINTER = registerBlock("money_printer",()-> new MoneyPrinterBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GOLD_BLOCK).noOcclusion()));
-
-
-
-    public static final RegistryObject<PressurePlateBlock> BlUE_PRESSURE_PLATE = registerBlock("blue_pressure_plate",()->new PressurePlateBlock(BlockSetType.IRON,
+       public static final RegistryObject<PressurePlateBlock> BlUE_PRESSURE_PLATE = registerBlock("blue_pressure_plate",()->new PressurePlateBlock(BlockSetType.IRON,
             BlockBehaviour.Properties.of().strength(1f)));
     public static final RegistryObject<ButtonBlock> BlUE_BUTTON = registerBlock("blue_button",()->new ButtonBlock(BlockSetType.IRON,3,
             BlockBehaviour.Properties.of().strength(1f).noCollission()));

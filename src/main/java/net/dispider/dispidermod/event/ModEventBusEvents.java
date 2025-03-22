@@ -2,6 +2,8 @@ package net.dispider.dispidermod.event;
 
 import net.dispider.dispidermod.DiSpiderMod;
 import net.dispider.dispidermod.entity.ModEntities;
+import net.dispider.dispidermod.entity.client.ManModel;
+import net.dispider.dispidermod.entity.custom.ManEntity;
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -13,7 +15,13 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = DiSpiderMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEventBusEvents {
+@SubscribeEvent
+       public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event){
+           event.registerLayerDefinition(ManModel.LAYER_LOCATION, ManModel::createBodyLayer);
+       }
 
-
+       public static void registerAttributes(EntityAttributeCreationEvent event){
+    event.put(ModEntities.MAN.get(), ManEntity.createAttributes().build());
+       }
 
 }

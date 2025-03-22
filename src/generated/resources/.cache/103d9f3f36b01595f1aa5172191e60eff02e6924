@@ -1,4 +1,4 @@
-// 1.21	2024-12-12T22:16:11.7108266	Registries
+// 1.21	2025-03-22T14:11:43.327023	Registries
 b9ff86218c18444fdc5ca36659c2946326839dd9 data/dispider_mod/dimension/aether.json
 e241e971aacde6f4d0236c622c99d6c9caeb981e data/dispider_mod/dimension_type/aether.json
 a802c058d005b2bf21efb1f964fc40ae7408261a data/dispider_mod/enchantment/lightning_striker.json
@@ -10,7 +10,7 @@ f8607e79999742df17c82ae6252413ca57714360 data/dispider_mod/forge/biome_modifier/
 439e5af0e6e3e9649b5bd80972816df2f0402be2 data/dispider_mod/forge/biome_modifier/add_tree_white.json
 70a252354e67f6cc82a552599db08368fb3997e6 data/dispider_mod/trim_material/rainbow.json
 0934ba1afdb476f88d0a625e0a113816053d8443 data/dispider_mod/trim_pattern/peace.json
-b6d568c3a4f171489d90f7832e9975cfeef8dd9a data/dispider_mod/worldgen/biome/red_biome.json
+df5e894a30d5ba6def8064b37e49108fca5a7adc data/dispider_mod/worldgen/biome/red_biome.json
 8d64a08b75dd5939c4509af381e98fd46c47abbd data/dispider_mod/worldgen/biome/white_biome.json
 89728b34747653c0359facc654704d2cc1177f53 data/dispider_mod/worldgen/configured_feature/blue.json
 f3185f7182c4b578b24a7f9bf18140a213a12f1b data/dispider_mod/worldgen/configured_feature/end_rainbow_ore.json

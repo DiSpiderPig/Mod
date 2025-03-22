@@ -82,8 +82,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(ModBlocks.RED_DOOR.get(),modLoc("block/red_door_bottom"),modLoc("block/red_door_top"),"cutout");
         trapdoorBlockWithRenderType(ModBlocks.RED_TRAP_DOOR.get(),modLoc("block/red_trap_door"),true,"cutout");
 
-         simpleBlock(ModBlocks.MONEY_PRINTER.get(), new ModelFile.UncheckedModelFile(modLoc("block/money_printer")) {
-         });
 
         blockItem(ModBlocks.BlUE_PRESSURE_PLATE);
         blockItem(ModBlocks.BlUE_SLAB);

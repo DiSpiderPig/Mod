@@ -11,8 +11,6 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, DiSpiderMod.MODID);
 
-     public static final RegistryObject<BlockEntityType<ModMoneyPrinterBlockEntity>> MONEY_PRINTER_BE = BLOCK_ENTITIES.register("money_printer_be",()->
-            BlockEntityType.Builder.of(ModMoneyPrinterBlockEntity::new, ModBlocks.MONEY_PRINTER.get()).build(null));
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

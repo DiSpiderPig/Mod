@@ -1,6 +1,7 @@
 package net.dispider.dispidermod.entity;
 
 import net.dispider.dispidermod.DiSpiderMod;
+import net.dispider.dispidermod.entity.custom.ManEntity;
 import net.dispider.dispidermod.entity.custom.projectile.MasterBallProjectileEntity;
 import net.dispider.dispidermod.entity.custom.projectile.PokeballProjectileEntity;
 import net.minecraft.world.entity.EntityType;
@@ -17,6 +18,10 @@ public class  ModEntities {
 
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, DiSpiderMod.MODID);
 
+
+public static final RegistryObject<EntityType<ManEntity>> MAN = ENTITY_TYPES.register("man",
+        ()-> EntityType.Builder.of(ManEntity::new,MobCategory.CREATURE).sized(
+  1.5f,3f  ).build("man"));
 
 
 

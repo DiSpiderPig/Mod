@@ -8,7 +8,7 @@ public class ModModelLayers {
 
 
 
-    public static final ModelLayerLocation GRON_LAYER = register("gron_layer");
+
 
     private static ModelLayerLocation register(String name) {
         return new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, name), "main");
