@@ -1,12 +1,17 @@
 package net.dispider.dispidermod.entity.client;
 
+import com.google.common.collect.Maps;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.dispider.dispidermod.DiSpiderMod;
+import net.dispider.dispidermod.entity.AppaVariant;
 import net.dispider.dispidermod.entity.custom.ManEntity;
+import net.minecraft.Util;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
+
+import java.util.Map;
 
 public class ManRenderer extends MobRenderer<ManEntity, ManModel<ManEntity>> {
 

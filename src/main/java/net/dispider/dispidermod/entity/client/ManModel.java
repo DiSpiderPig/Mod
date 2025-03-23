@@ -15,7 +15,7 @@ import net.minecraft.world.entity.Entity;
 
 public class ManModel<T extends ManEntity> extends HierarchicalModel<T> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("modid", "man"), "main");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID, "man"), "main");
     private final ModelPart full;
     private final ModelPart head ;
 

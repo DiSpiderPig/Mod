@@ -2,6 +2,7 @@ package net.dispider.dispidermod.worldgen.biome;
 
 import net.dispider.dispidermod.DiSpiderMod;
 import net.dispider.dispidermod.entity.ModEntities;
+import net.dispider.dispidermod.entity.custom.AppaEntity;
 import net.dispider.dispidermod.sound.ModSounds;
 import net.dispider.dispidermod.worldgen.ModPlacedFeatures;
 import net.minecraft.core.registries.Registries;

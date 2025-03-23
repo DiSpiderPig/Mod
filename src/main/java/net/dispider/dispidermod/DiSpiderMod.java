@@ -7,6 +7,7 @@ import net.dispider.dispidermod.component.ModDataComponents;
 import net.dispider.dispidermod.effect.ModEffects;
 import net.dispider.dispidermod.enchantment.ModEnchantmentEffects;
 import net.dispider.dispidermod.entity.ModEntities;
+import net.dispider.dispidermod.entity.client.AppaRenderer;
 import net.dispider.dispidermod.entity.client.ManRenderer;
 import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.potion.ModPotions;
@@ -178,6 +179,7 @@ public class DiSpiderMod
             EntityRenderers.register(ModEntities.EnderDragonPROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.WitherPROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.MAN.get(), ManRenderer::new);
+            EntityRenderers.register(ModEntities.APPA.get(), AppaRenderer::new);
 
 
         }

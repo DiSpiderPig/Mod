@@ -1,6 +1,7 @@
 package net.dispider.dispidermod.entity;
 
 import net.dispider.dispidermod.DiSpiderMod;
+import net.dispider.dispidermod.entity.custom.AppaEntity;
 import net.dispider.dispidermod.entity.custom.ManEntity;
 import net.dispider.dispidermod.entity.custom.projectile.MasterBallProjectileEntity;
 import net.dispider.dispidermod.entity.custom.projectile.PokeballProjectileEntity;
@@ -22,6 +23,9 @@ public class  ModEntities {
 public static final RegistryObject<EntityType<ManEntity>> MAN = ENTITY_TYPES.register("man",
         ()-> EntityType.Builder.of(ManEntity::new,MobCategory.CREATURE).sized(
   1.5f,3f  ).build("man"));
+
+public static final RegistryObject<EntityType<AppaEntity>> APPA =
+        ENTITY_TYPES.register("appa",()-> EntityType.Builder.of(AppaEntity::new,MobCategory.CREATURE).sized(5f,7.5f).build("appa"));
 
 
 
