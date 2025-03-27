@@ -1,40 +1,65 @@
-[22Mar2025 14:11:37.551] [main/INFO] [mixin/]: Mixing MixinBuiltInRegistries from terrablender.mixins.json into net.minecraft.core.registries.BuiltInRegistries
-[22Mar2025 14:11:37.553] [main/WARN] [mixin/]: terrablender.mixins.json:MixinBuiltInRegistries: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
-[22Mar2025 14:11:37.560] [main/INFO] [mixin/]: Renaming synthetic method lambda$registerSimple$0(Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;Lnet/minecraft/core/Registry;)Ljava/lang/Object; to mdfb5e45$terrablender$lambda$registerSimple$0$0 in terrablender.mixins.json:MixinBuiltInRegistries
-[22Mar2025 14:11:37.774] [main/INFO] [mixin/]: Mixing Mixing from mixins.mymod.json into net.minecraft.world.entity.player.Player
-[22Mar2025 14:11:37.812] [main/WARN] [mixin/]: mixins.mymod.json:Mixing: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
-[22Mar2025 14:11:41.480] [main/INFO] [mixin/]: Mixing MixinBiomeSource from terrablender.mixins.json into net.minecraft.world.level.biome.BiomeSource
-[22Mar2025 14:11:41.482] [main/INFO] [mixin/]: Renaming synthetic method lambda$appendDeferredBiomesList$0(Ljava/util/List;)Ljava/util/Set; to mdfb5e45$terrablender$lambda$appendDeferredBiomesList$0$0 in terrablender.mixins.json:MixinBiomeSource
-[22Mar2025 14:11:41.551] [main/INFO] [mixin/]: Mixing MixinMultiNoiseBiomeSource from terrablender.mixins.json into net.minecraft.world.level.biome.MultiNoiseBiomeSource
-[22Mar2025 14:11:41.558] [main/INFO] [mixin/]: Mixing MixinParameterList from terrablender.mixins.json into net.minecraft.world.level.biome.Climate$ParameterList
-[22Mar2025 14:11:41.558] [main/INFO] [mixin/]: Renaming synthetic method lambda$initializeForTerraBlender$0(Lnet/minecraft/core/Registry;Ljava/util/List;Lcom/mojang/datafixers/util/Pair;)V to mdfb5e45$terrablender$lambda$initializeForTerraBlender$0$0 in terrablender.mixins.json:MixinParameterList
-[22Mar2025 14:11:41.603] [main/INFO] [mixin/]: Mixing MixinTheEndBiomeSource from terrablender.mixins.json into net.minecraft.world.level.biome.TheEndBiomeSource
-[22Mar2025 14:11:41.604] [main/INFO] [mixin/]: Renaming synthetic method lambda$initializeForTerraBlender$0(Lnet/minecraft/resources/ResourceKey;)V to mdfb5e45$terrablender$lambda$initializeForTerraBlender$0$0 in terrablender.mixins.json:MixinTheEndBiomeSource
-[22Mar2025 14:11:41.645] [main/INFO] [mixin/]: Mixing MixinChunkGenerator from terrablender.mixins.json into net.minecraft.world.level.chunk.ChunkGenerator
-[22Mar2025 14:11:41.653] [main/INFO] [mixin/]: Mixing MixinNoiseGeneratorSettings from terrablender.mixins.json into net.minecraft.world.level.levelgen.NoiseGeneratorSettings
-[22Mar2025 14:11:41.654] [main/WARN] [mixin/]: @Shadow target terrablender.mixins.json:MixinNoiseGeneratorSettings::surfaceRule is final but shadow is not decorated with @Final
-[22Mar2025 14:11:41.979] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
-[22Mar2025 14:11:41.979] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
-[22Mar2025 14:11:42.001] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[22Mar2025 14:11:42.019] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
-[22Mar2025 14:11:42.019] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
-[22Mar2025 14:11:42.019] [modloading-worker-0/INFO] [terrablender/]: Registered region dispider_mod:overworld to index 1 for type OVERWORLD
-[22Mar2025 14:11:42.632] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [dispider_mod]
-[22Mar2025 14:11:42.688] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/egw/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.11.10-1.21/forge-1.21-51.0.33_mapped_parchment_2024.11.10-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[22Mar2025 14:11:42.688] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/egw/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.11.10-1.21/forge-1.21-51.0.33_mapped_parchment_2024.11.10-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
-[22Mar2025 14:11:42.812] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[22Mar2025 14:11:43.024] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 210 ms
-[22Mar2025 14:11:43.024] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[22Mar2025 14:11:43.075] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 50 ms
-[22Mar2025 14:11:43.075] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id dispider_mod
-[22Mar2025 14:11:43.084] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id dispider_mod finished after 9 ms
-[22Mar2025 14:11:43.084] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id dispider_mod
-[22Mar2025 14:11:43.086] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id dispider_mod finished after 1 ms
-[22Mar2025 14:11:43.086] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: dispider_mod
-[22Mar2025 14:11:43.119] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: dispider_mod finished after 33 ms
-[22Mar2025 14:11:43.119] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: dispider_mod
-[22Mar2025 14:11:43.304] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: dispider_mod finished after 184 ms
-[22Mar2025 14:11:43.305] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[22Mar2025 14:11:43.325] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 20 ms
-[22Mar2025 14:11:43.325] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 512 ms
-[22Mar2025 14:11:43.332] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 531, old count: 531, new count: 532, removed stale: 0, written: 2
+[23Mar2025 17:39:22.300] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\egw\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, dispider_mod, --all, --output, D:\JavaCode\Mc\src\generated\resources, --existing, D:\JavaCode\Mc\src\main\resources, --mixin.config, mixins.mymod.json]
+[23Mar2025 17:39:22.305] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.5+11-LTS
+[23Mar2025 17:39:22.306] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.5 by Amazon.com Inc.; OS Windows 10 arch amd64 version 10.0
+[23Mar2025 17:39:22.413] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[23Mar2025 17:39:22.519] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/egw/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[23Mar2025 17:39:23.474] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[23Mar2025 17:39:24.185] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by mixins.mymod.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[23Mar2025 17:39:24.185] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[23Mar2025 17:39:24.185] [main/ERROR] [mixin/]: Mixin config mixins.mymod.json does not specify "minVersion" or "requiredFeatures" property
+[23Mar2025 17:39:24.195] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\egw\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, dispider_mod, --all, --output, D:\JavaCode\Mc\src\generated\resources, --existing, D:\JavaCode\Mc\src\main\resources]
+[23Mar2025 17:39:24.216] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[23Mar2025 17:39:24.217] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[23Mar2025 17:39:24.226] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[23Mar2025 17:39:24.226] [main/INFO] [mixin/]: Selecting config mixins.mymod.json
+[23Mar2025 17:39:24.229] [main/WARN] [mixin/]: Reference map 'dispider_mod.mixin-refmap.json' for mixins.mymod.json could not be read. If this is a development environment you can ignore this message
+[23Mar2025 17:39:24.230] [main/INFO] [mixin/]: Selecting config terrablender.mixins.json
+[23Mar2025 17:39:24.230] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender.mixins.json could not be read. If this is a development environment you can ignore this message
+[23Mar2025 17:39:24.231] [main/INFO] [mixin/]: Selecting config terrablender_forge.mixins.json
+[23Mar2025 17:39:24.231] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender_forge.mixins.json could not be read. If this is a development environment you can ignore this message
+[23Mar2025 17:39:24.232] [main/INFO] [mixin/]: Preparing mixins.mymod.json (1)
+[23Mar2025 17:39:24.276] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[23Mar2025 17:39:24.276] [main/INFO] [mixin/]: Preparing terrablender.mixins.json (9)
+[23Mar2025 17:39:24.299] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[23Mar2025 17:39:24.299] [main/INFO] [mixin/]: Preparing terrablender_forge.mixins.json (0)
+[23Mar2025 17:39:24.299] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[23Mar2025 17:39:24.540] [main/INFO] [mixin/]: Mixing MixinBuiltInRegistries from terrablender.mixins.json into net.minecraft.core.registries.BuiltInRegistries
+[23Mar2025 17:39:24.542] [main/WARN] [mixin/]: terrablender.mixins.json:MixinBuiltInRegistries: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[23Mar2025 17:39:24.548] [main/INFO] [mixin/]: Renaming synthetic method lambda$registerSimple$0(Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;Lnet/minecraft/core/Registry;)Ljava/lang/Object; to mdd6d108$terrablender$lambda$registerSimple$0$0 in terrablender.mixins.json:MixinBuiltInRegistries
+[23Mar2025 17:39:24.758] [main/INFO] [mixin/]: Mixing Mixing from mixins.mymod.json into net.minecraft.world.entity.player.Player
+[23Mar2025 17:39:24.800] [main/WARN] [mixin/]: mixins.mymod.json:Mixing: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[23Mar2025 17:39:28.224] [main/INFO] [mixin/]: Mixing MixinBiomeSource from terrablender.mixins.json into net.minecraft.world.level.biome.BiomeSource
+[23Mar2025 17:39:28.225] [main/INFO] [mixin/]: Renaming synthetic method lambda$appendDeferredBiomesList$0(Ljava/util/List;)Ljava/util/Set; to mdd6d108$terrablender$lambda$appendDeferredBiomesList$0$0 in terrablender.mixins.json:MixinBiomeSource
+[23Mar2025 17:39:28.272] [main/INFO] [mixin/]: Mixing MixinMultiNoiseBiomeSource from terrablender.mixins.json into net.minecraft.world.level.biome.MultiNoiseBiomeSource
+[23Mar2025 17:39:28.279] [main/INFO] [mixin/]: Mixing MixinParameterList from terrablender.mixins.json into net.minecraft.world.level.biome.Climate$ParameterList
+[23Mar2025 17:39:28.279] [main/INFO] [mixin/]: Renaming synthetic method lambda$initializeForTerraBlender$0(Lnet/minecraft/core/Registry;Ljava/util/List;Lcom/mojang/datafixers/util/Pair;)V to mdd6d108$terrablender$lambda$initializeForTerraBlender$0$0 in terrablender.mixins.json:MixinParameterList
+[23Mar2025 17:39:28.323] [main/INFO] [mixin/]: Mixing MixinTheEndBiomeSource from terrablender.mixins.json into net.minecraft.world.level.biome.TheEndBiomeSource
+[23Mar2025 17:39:28.323] [main/INFO] [mixin/]: Renaming synthetic method lambda$initializeForTerraBlender$0(Lnet/minecraft/resources/ResourceKey;)V to mdd6d108$terrablender$lambda$initializeForTerraBlender$0$0 in terrablender.mixins.json:MixinTheEndBiomeSource
+[23Mar2025 17:39:28.353] [main/INFO] [mixin/]: Mixing MixinChunkGenerator from terrablender.mixins.json into net.minecraft.world.level.chunk.ChunkGenerator
+[23Mar2025 17:39:28.361] [main/INFO] [mixin/]: Mixing MixinNoiseGeneratorSettings from terrablender.mixins.json into net.minecraft.world.level.levelgen.NoiseGeneratorSettings
+[23Mar2025 17:39:28.362] [main/WARN] [mixin/]: @Shadow target terrablender.mixins.json:MixinNoiseGeneratorSettings::surfaceRule is final but shadow is not decorated with @Final
+[23Mar2025 17:39:28.651] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[23Mar2025 17:39:28.652] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[23Mar2025 17:39:28.666] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[23Mar2025 17:39:28.685] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
+[23Mar2025 17:39:28.685] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
+[23Mar2025 17:39:28.685] [modloading-worker-0/INFO] [terrablender/]: Registered region dispider_mod:overworld to index 1 for type OVERWORLD
+[23Mar2025 17:39:29.203] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [dispider_mod]
+[23Mar2025 17:39:29.254] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/egw/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.11.10-1.21/forge-1.21-51.0.33_mapped_parchment_2024.11.10-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[23Mar2025 17:39:29.254] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/egw/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.11.10-1.21/forge-1.21-51.0.33_mapped_parchment_2024.11.10-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[23Mar2025 17:39:29.373] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[23Mar2025 17:39:29.557] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 184 ms
+[23Mar2025 17:39:29.557] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[23Mar2025 17:39:29.608] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 50 ms
+[23Mar2025 17:39:29.609] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id dispider_mod
+[23Mar2025 17:39:29.617] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id dispider_mod finished after 8 ms
+[23Mar2025 17:39:29.618] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id dispider_mod
+[23Mar2025 17:39:29.619] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id dispider_mod finished after 1 ms
+[23Mar2025 17:39:29.619] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: dispider_mod
+[23Mar2025 17:39:29.653] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: dispider_mod finished after 33 ms
+[23Mar2025 17:39:29.653] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: dispider_mod
+[23Mar2025 17:39:29.845] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: dispider_mod finished after 192 ms
+[23Mar2025 17:39:29.845] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[23Mar2025 17:39:29.866] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 21 ms
+[23Mar2025 17:39:29.867] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 494 ms
+[23Mar2025 17:39:29.873] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 529, old count: 529, new count: 530, removed stale: 0, written: 1

@@ -1,4 +1,4 @@
-// 1.21	2024-12-09T20:13:39.8315419	Loot Tables
+// 1.21	2025-03-23T17:20:07.1086895	Loot Tables
 a6b9b8541c809c7842802702f2eefcbbfb3ac22c data/dispider_mod/loot_table/blocks/blue_button.json
 bcd9bbed9cfc786d538f14042ec9bbcf330b9064 data/dispider_mod/loot_table/blocks/blue_door.json
 e2b08d7490d94ec27a3375162431fd7a804e4d30 data/dispider_mod/loot_table/blocks/blue_fence.json
@@ -16,7 +16,6 @@ d328378d912fcd63cc5e68e56376618385a91ff2 data/dispider_mod/loot_table/blocks/blu
 715574f2113f0e79cb488022239bbc99b74a19af data/dispider_mod/loot_table/blocks/deepslate_rainbow_ore.json
 f354f1db9cb6267e77399746e79436f54c653355 data/dispider_mod/loot_table/blocks/end_rainbow_ore.json
 350304b90639e06ea41e38417ee03238c4e930a7 data/dispider_mod/loot_table/blocks/mokip.json
-602f69a7e3a1173c3db6baa53db814ebd0fa4143 data/dispider_mod/loot_table/blocks/money_printer.json
 136e7a7e86bba8a56f95d1fb4071bab616c9d525 data/dispider_mod/loot_table/blocks/nether_rainbow_ore.json
 f3b550ef19218f2cef8686a6e56b0ffb17ad60a9 data/dispider_mod/loot_table/blocks/pokeblock.json
 e1d4922181ea4df56b7f66fbf800dec4ea185192 data/dispider_mod/loot_table/blocks/rainbow_block.json

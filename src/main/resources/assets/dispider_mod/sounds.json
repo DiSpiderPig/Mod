@@ -12,5 +12,21 @@
         "stream": true
       }
     ]
+  },
+  "idle": {
+    "sounds": [
+      {
+        "name": "dispider_mod:idle",
+        "stream": true
+      }
+    ]
+  },
+  "attacked": {
+    "sounds": [
+      {
+        "name": "dispider_mod:attacked",
+        "stream": true
+      }
+    ]
   }
 }

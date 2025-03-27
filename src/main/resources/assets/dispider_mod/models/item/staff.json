@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "dispider_mod:item/staff_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "dispider_mod:item/staff_2d"
+    },
+    "ground": {
+      "parent": "dispider_mod:item/staff_3d"
+    },
+    "fixed": {
+      "parent": "dispider_mod:item/staff_2d"
+    }
+  }
+}

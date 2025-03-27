@@ -1,4 +1,4 @@
-// 1.21	2024-12-09T20:13:39.7993847	Block States: dispider_mod
+// 1.21	2025-03-23T17:20:07.1046878	Block States: dispider_mod
 439b833c46e950b29779a8b2cf6c4ba50b092b66 assets/dispider_mod/blockstates/blue_button.json
 2ce018dbae3160ad7c0ef3854d08e42393eb9399 assets/dispider_mod/blockstates/blue_door.json
 681651f3287f692c13a526becd08316c06f2f7f8 assets/dispider_mod/blockstates/blue_fence.json
@@ -17,7 +17,6 @@ e31fc7f3558418f40c58c37a3366f29f8e7e8da3 assets/dispider_mod/blockstates/deepsla
 d15f4e75b94210db9ed08d36925ba58dd29cb954 assets/dispider_mod/blockstates/end_rainbow_ore.json
 3251e042ff0b21bd152c77191014b2dc3aeb390f assets/dispider_mod/blockstates/mod_portal.json
 31d89757a7b17f2c4e9a8642dfe3ab4dc831d29a assets/dispider_mod/blockstates/mokip.json
-73c44084dee98b4b20436d2626e36b2e5e48e66e assets/dispider_mod/blockstates/money_printer.json
 03cdf8d94c1aa86a4b34a841014f0cd7bc6a3297 assets/dispider_mod/blockstates/nether_rainbow_ore.json
 e645667b03386f0b9d351cd3ad7f818d1d23c2b2 assets/dispider_mod/blockstates/pokeblock.json
 9a6de11d8e595b2005f78fa4752fc5d48d73c13f assets/dispider_mod/blockstates/rainbow_block.json

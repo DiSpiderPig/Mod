@@ -3,15 +3,23 @@ package net.dispider.dispidermod;
 import com.mojang.logging.LogUtils;
 import net.dispider.dispidermod.block.ModBlocks;
 import net.dispider.dispidermod.block.entity.ModBlockEntities;
+import net.dispider.dispidermod.block.entity.renderer.GoldSmelterBlockEntityRenderer;
+import net.dispider.dispidermod.block.entity.renderer.PrinterBlockEntityRenderer;
 import net.dispider.dispidermod.component.ModDataComponents;
 import net.dispider.dispidermod.effect.ModEffects;
 import net.dispider.dispidermod.enchantment.ModEnchantmentEffects;
 import net.dispider.dispidermod.entity.ModEntities;
 import net.dispider.dispidermod.entity.client.AppaRenderer;
+import net.dispider.dispidermod.entity.client.GronRenderer;
 import net.dispider.dispidermod.entity.client.ManRenderer;
+import net.dispider.dispidermod.entity.client.PrinterRenderer;
 import net.dispider.dispidermod.item.ModItems;
 import net.dispider.dispidermod.potion.ModPotions;
+import net.dispider.dispidermod.screen.GuideMenu;
+import net.dispider.dispidermod.screen.GuideScreen;
 import net.dispider.dispidermod.screen.ModMenuTypes;
+import net.dispider.dispidermod.screen.custom.GoldSmelterScreen;
+import net.dispider.dispidermod.screen.custom.PrinterScreen;
 import net.dispider.dispidermod.sound.ModSounds;
 import net.dispider.dispidermod.util.ModItemProperties;
 import net.dispider.dispidermod.worldgen.biome.ModTerrablender;
@@ -21,8 +29,10 @@ import net.dispider.dispidermod.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+import net.minecraft.world.MenuProvider;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -180,9 +190,26 @@ public class DiSpiderMod
             EntityRenderers.register(ModEntities.WitherPROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.MAN.get(), ManRenderer::new);
             EntityRenderers.register(ModEntities.APPA.get(), AppaRenderer::new);
+            EntityRenderers.register(ModEntities.Printer.get(), PrinterRenderer::new);
+            EntityRenderers.register(ModEntities.Gron.get(), GronRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.GOLD_SMELTER_MENU.get(), GoldSmelterScreen::new);
+
+            MenuScreens.register(ModMenuTypes.PRINTER_MENU.get(), PrinterScreen::new);
+
+            MenuScreens.register(ModMenuTypes.GUIDE_MENU.get(), GuideScreen::new);
+
 
 
         }
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event){
+            event.registerBlockEntityRenderer(ModBlockEntities.PRINTER_BE.get(), PrinterBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.GOLD_SMELTER_BE.get(), GoldSmelterBlockEntityRenderer::new);
+        }
+
     }
+
+
 
 }

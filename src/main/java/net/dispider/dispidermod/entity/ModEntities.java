@@ -2,6 +2,7 @@ package net.dispider.dispidermod.entity;
 
 import net.dispider.dispidermod.DiSpiderMod;
 import net.dispider.dispidermod.entity.custom.AppaEntity;
+import net.dispider.dispidermod.entity.custom.GronEntity;
 import net.dispider.dispidermod.entity.custom.ManEntity;
 import net.dispider.dispidermod.entity.custom.projectile.MasterBallProjectileEntity;
 import net.dispider.dispidermod.entity.custom.projectile.PokeballProjectileEntity;
@@ -23,6 +24,16 @@ public class  ModEntities {
 public static final RegistryObject<EntityType<ManEntity>> MAN = ENTITY_TYPES.register("man",
         ()-> EntityType.Builder.of(ManEntity::new,MobCategory.CREATURE).sized(
   1.5f,3f  ).build("man"));
+
+    public static final RegistryObject<EntityType<GronEntity>> Gron = ENTITY_TYPES.register("gron",
+            ()-> EntityType.Builder.of(GronEntity::new,MobCategory.CREATURE).sized(
+                    1f,4f  ).build("gron"));
+
+    public static final RegistryObject<EntityType<PrinterEntity>> Printer = ENTITY_TYPES.register("printer",
+            ()-> EntityType.Builder.of(PrinterEntity::new,MobCategory.CREATURE).sized(
+                    0.5f,0.5f  ).build("printer"));
+
+
 
 public static final RegistryObject<EntityType<AppaEntity>> APPA =
         ENTITY_TYPES.register("appa",()-> EntityType.Builder.of(AppaEntity::new,MobCategory.CREATURE).sized(5f,7.5f).build("appa"));

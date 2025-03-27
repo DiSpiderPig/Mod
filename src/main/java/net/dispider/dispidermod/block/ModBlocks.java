@@ -134,6 +134,11 @@ public class ModBlocks {
 
 
 
+    public static final RegistryObject<Block> Printer = registerBlock("printer",()-> new PrinterBlock(BlockBehaviour.Properties.of().noOcclusion()));
+
+
+
+
     public static final RegistryObject<FenceBlock> BlUE_FENCE = registerBlock("blue_fence",()->new FenceBlock(
             BlockBehaviour.Properties.of().strength(1f).requiresCorrectToolForDrops()));
     public static final RegistryObject<FenceGateBlock> BlUE_FENCE_GATE = registerBlock("blue_fence_gate",()->new FenceGateBlock(WoodType.ACACIA,
@@ -143,6 +148,8 @@ public class ModBlocks {
 
     public static final RegistryObject<GrassBlock> WHITE_GRASS = registerBlock(
             "white_grass",()->new GrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
+
+    public static final RegistryObject<Block> GOLD_SMELTER = registerBlock("gold_smelter",()-> new GoldSmelterBlock(BlockBehaviour.Properties.of()));
 
 
 

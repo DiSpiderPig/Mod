@@ -90,6 +90,12 @@
   "block.dispider_mod.white_sapling": "White Sapling",
   "block.dispider_mod.mod_portal": "????",
   "block.dispider_mod.white_grass": "White Grass",
-  "entity.dispider_mod.man": "Man"
-  "entity.dispider_mod.appa": "Appa"
+  "entity.dispider_mod.man": "Man",
+  "entity.dispider_mod.appa": "Appa",
+  "block.dispider_mod.printer": "Printer",
+  "item.dispider_mod.knife": "Knife ",
+  "item.dispider_mod.staff": "Staff",
+  "entity.dispider_mod.gron": "Gron",
+  "block.dispider_mod.gold_smelter": "Gold Smelter",
+  "item.dispider_mod.guide": "Guide"
 }

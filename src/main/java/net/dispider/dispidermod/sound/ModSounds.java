@@ -28,6 +28,10 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> KatanaSlash = registerSoundEvent("katanaslash");
     public static final RegistryObject<SoundEvent> KatanaBigSlash = registerSoundEvent("katanabigslash");
 
+    public static final RegistryObject<SoundEvent> Appa_Idle = registerSoundEvent("idle");
+
+    public static final RegistryObject<SoundEvent> Appa_Hurt = registerSoundEvent("attacked");
+
     public static final ResourceKey<JukeboxSong> Moontale_Key = ResourceKey.create(Registries.JUKEBOX_SONG,ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"moontale"));
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name){
