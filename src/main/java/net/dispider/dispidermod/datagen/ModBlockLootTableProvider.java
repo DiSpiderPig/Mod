@@ -97,6 +97,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.WHITE_PLANK.get());
         dropSelf(ModBlocks.STRIPPED_WHITE_WOOD.get());
         dropSelf(ModBlocks.STRIPPED_WHITE_LOG.get());
+        dropSelf(ModBlocks.Printer.get());
+        dropSelf(ModBlocks.GOLD_SMELTER.get());
        dropSelf(ModBlocks.SMILEY_FACE_LAMP.get());
 
         LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.TOMATO_CROP.get())

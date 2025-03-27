@@ -125,6 +125,12 @@
         "weight": 10
       },
       {
+        "type": "dispider_mod:dealer",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
         "type": "minecraft:chicken",
         "maxCount": 4,
         "minCount": 4,

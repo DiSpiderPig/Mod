@@ -91,6 +91,8 @@ public class ModItems {
    public static final RegistryObject<Item> VAPE = ITEMS.register("vape",()-> new VapeItem(new Item.Properties()
            .food(ModFoodProperties.VAPE)));
 
+   public static final RegistryObject<Item> CRACK_COCAINE = ITEMS.register("crack_cocaine",()-> new CrackCocaineItem(new Item.Properties().food(ModFoodProperties.CRACK_COCAINE)));
+
    public static final RegistryObject<Item> PEACE_SMITHING_TEMPLATE = ITEMS.register("peace_armor_trim_smithing_template",()-> SmithingTemplateItem.
            createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(DiSpiderMod.MODID,"peace")));
 
@@ -114,7 +116,13 @@ public class ModItems {
    public static final RegistryObject<Item> WitherMasterball = ITEMS.register("wither_masterball",()-> new WitherMasterBallItem(new Item.Properties()));
 
 
+   public static final RegistryObject<Item> Knife = ITEMS.register("knife",()->new SwordItem(ModToolTiers.EMERALD,new Item.Properties()
+           .attributes(SwordItem.createAttributes(ModToolTiers.EMERALD,3,-2.4f)).stacksTo(1)));
 
+   public static final RegistryObject<Item> Staff = ITEMS.register("staff",()->new SwordItem(ModToolTiers.EMERALD,new Item.Properties()
+           .attributes(SwordItem.createAttributes(ModToolTiers.EMERALD,3,-2.4f)).stacksTo(1)));
+
+   public static final RegistryObject<Item> GUIDE = ITEMS.register("guide",()-> new GuideItem(new Item.Properties()));
 
    public static void register(IEventBus eventbus){
       ITEMS.register(eventbus);

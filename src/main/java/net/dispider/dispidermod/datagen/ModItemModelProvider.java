@@ -46,6 +46,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.Bitcoin.get());
         basicItem(ModItems.Money.get());
         basicItem(ModItems.Rainbow.get());
+        basicItem(ModItems.CRACK_COCAINE.get());
         basicItem(ModItems.RugaUsed.get());
         basicItem(ModItems.Petrol.get());
         basicItem(ModItems.TOMATO.get());

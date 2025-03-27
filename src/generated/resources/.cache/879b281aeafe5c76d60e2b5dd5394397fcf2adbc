@@ -1,4 +1,4 @@
-// 1.21	2024-12-09T20:13:39.8023848	Item Models: dispider_mod
+// 1.21	2025-06-03T13:57:38.0955713	Item Models: dispider_mod
 2e719644d152404f1e86c104ad2983c4a55699de assets/dispider_mod/models/item/bitcoin.json
 d22d9230a3970452cd4a67eac2ac1c91d51e27e1 assets/dispider_mod/models/item/black_katana.json
 dc9a2ff3873f3535f02e9c5f2a537f1fba07a17e assets/dispider_mod/models/item/blue_button.json
@@ -6,6 +6,7 @@ dc9a2ff3873f3535f02e9c5f2a537f1fba07a17e assets/dispider_mod/models/item/blue_bu
 ac611639b23a83cdc7c7d23c4495c546f2cb14e6 assets/dispider_mod/models/item/blue_fence.json
 248c21a650008c7c1d590c4fd2059b612a971975 assets/dispider_mod/models/item/blue_sapling.json
 22e7a61a3851fb6a788e8d003d18dbbea67809fe assets/dispider_mod/models/item/blue_wall.json
+57dcf5365e51980b692556aa64f136ebffa71ef0 assets/dispider_mod/models/item/crack_cocaine.json
 32b88b28c87dfe9000d2fc8b16dcbc5e84e23b08 assets/dispider_mod/models/item/creeper_pokeball.json
 73cc80f1c395038e0b59761804fd2c9fac75115e assets/dispider_mod/models/item/emerald_axe.json
 f751f3c6a9bde661aa7c3c929cad2018abff0a9c assets/dispider_mod/models/item/emerald_boots.json

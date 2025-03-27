@@ -1,35 +1,56 @@
 package net.dispider.dispidermod.entity.custom;
 
+import com.google.common.annotations.VisibleForTesting;
+import com.mojang.datafixers.kinds.App;
 import net.dispider.dispidermod.entity.AppaVariant;
 import net.dispider.dispidermod.entity.ModEntities;
 import net.dispider.dispidermod.item.ModItems;
+import net.dispider.dispidermod.sound.ModSounds;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.DebugPackets;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.util.Mth;
+import net.minecraft.world.BossEvent;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.control.BodyRotationControl;
+import net.minecraft.world.entity.ai.control.LookControl;
+import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.animal.camel.Camel;
+import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.DismountHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
-public class AppaEntity extends Animal implements PlayerRideable{
+public class AppaEntity extends AbstractHorse implements PlayerRideable{
     private static final EntityDataAccessor<Integer> VARIANT =
             SynchedEntityData.defineId(AppaEntity.class, EntityDataSerializers.INT);
 
@@ -37,7 +58,10 @@ public class AppaEntity extends Animal implements PlayerRideable{
     public int idleAnimationTimeout = 0;
 
 
-    public AppaEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+    private final ServerBossEvent bossEvent = new ServerBossEvent(Component.literal("Appa"), BossEvent.BossBarColor.WHITE, BossEvent.BossBarOverlay.NOTCHED_20);
+
+
+    public AppaEntity(EntityType<? extends AbstractHorse> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
@@ -57,7 +81,10 @@ public class AppaEntity extends Animal implements PlayerRideable{
     }
 
     public static AttributeSupplier.Builder createAttributes(){
-        return Animal.createLivingAttributes().add(Attributes.MAX_HEALTH,2000D).add(Attributes.MOVEMENT_SPEED,0.1D).add(Attributes.FOLLOW_RANGE,240D);
+        return Animal.createLivingAttributes().add(Attributes.MAX_HEALTH,2000D)
+                .add(Attributes.MOVEMENT_SPEED,0.1D)
+                .add(Attributes.FOLLOW_RANGE,240D)
+                ;
     }
 
     @Override
@@ -131,6 +158,41 @@ public class AppaEntity extends Animal implements PlayerRideable{
         ((AppaEntity) pBaby).setVariant(variant);
         super.finalizeSpawnChildFromBreeding(pLevel, pAnimal, pBaby);
     }
+
+    @Override
+    protected @Nullable SoundEvent getAmbientSound() {
+        return ModSounds.Appa_Idle.get();
+    }
+
+    @Override
+    protected @Nullable SoundEvent getHurtSound(DamageSource pDamageSource) {
+        return ModSounds.Appa_Hurt.get();
+    }
+
+    @Override
+    protected @Nullable SoundEvent getDeathSound() {
+        return SoundEvents.GHAST_DEATH;
+    }
+
+
+    @Override
+    public void startSeenByPlayer(ServerPlayer pServerPlayer) {
+        super.startSeenByPlayer(pServerPlayer);
+        this.bossEvent.addPlayer(pServerPlayer);
+    }
+
+    @Override
+    public void stopSeenByPlayer(ServerPlayer pServerPlayer) {
+        super.stopSeenByPlayer(pServerPlayer);
+        this.bossEvent.removePlayer(pServerPlayer);
+    }
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
+    }
+
     @Override
     public InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
         if (this.isVehicle() || this.isBaby()) {
@@ -155,6 +217,7 @@ public class AppaEntity extends Animal implements PlayerRideable{
             pPlayer.startRiding(this);
         }
     }
+    /*
 
     @Override
     public void travel(Vec3 pTravelVector) {
@@ -163,7 +226,7 @@ public class AppaEntity extends Animal implements PlayerRideable{
             LivingEntity livingEntity = this.getControllingPassenger();
             this.setYRot(livingEntity.getYRot());
             this.yRotO = this.getYRot();
-                    this.setXRot(livingEntity.getXRot());
+            this.setXRot(livingEntity.getXRot());
 
             if(this.isControlledByLocalInstance()){
 
@@ -239,4 +302,11 @@ public class AppaEntity extends Animal implements PlayerRideable{
     public HumanoidArm getMainArm() {
         return HumanoidArm.RIGHT;
     }
+
+    @Override
+    protected float getRiddenSpeed(Player pPlayer) {
+        return 1f;
+    }
+
+    */
 }

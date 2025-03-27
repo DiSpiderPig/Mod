@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dispider_mod:money_printer"
+          "name": "dispider_mod:gold_smelter"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "dispider_mod:blocks/money_printer"
+  "random_sequence": "dispider_mod:blocks/gold_smelter"
 }

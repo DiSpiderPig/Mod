@@ -17,6 +17,10 @@ public class ModFoodProperties {
             .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,300),0.40f)
             .effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,300),0.40f).build();
 
+    public static final FoodProperties CRACK_COCAINE = new FoodProperties.Builder().nutrition(0).saturationModifier(0.2f).effect(new MobEffectInstance(
+            MobEffects.NIGHT_VISION,300),1f).effect(new MobEffectInstance(MobEffects.CONFUSION,300),1f).build();
+
+
     public static final FoodProperties SOUL = new FoodProperties.Builder().nutrition(0).saturationModifier(1f).effect(
             new MobEffectInstance(ModEffects.SOUL_EFFECT.getHolder().get(),10000),1f).build();
 
