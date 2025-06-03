@@ -38,9 +38,7 @@ public class DealerEntity extends Animal {
     @Override
     public InteractionResult interactAt(Player pPlayer, Vec3 pVec, InteractionHand pHand) {
 
-        pPlayer.displayClientMessage(Component.literal(pHand.name()+InteractionHand.MAIN_HAND.name()),false);
-
-        if(pHand.equals(InteractionHand.MAIN_HAND)){
+        if(pHand.equals(InteractionHand.MAIN_HAND) && level().isClientSide){
             pPlayer.displayClientMessage(Component.literal(("Whachu want?")),false);
             if(pPlayer.getItemInHand(pHand).is(Items.IRON_INGOT.asItem())){
                 pPlayer.getItemInHand(pHand).shrink(1);
